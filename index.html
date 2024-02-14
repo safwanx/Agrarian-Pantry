@@ -7,26 +7,21 @@
     <title>Agrarian Pantry</title>
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Agrarian Pantry Logo" class="logo">
-        <div class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Products
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="products.html">All Products</a>
-                    <a href="fruits.html">Fruits</a>
-                    <a href="vegetables.html">Vegetable</a>
-                    <a href="meat.html">Meat</a>
-                </div>
-            </div>
-            <a href="cart.html"><img src="./images/cart-icon.png" alt="Shopping Cart" class="cart-icon"></a>
-        </div>
-    </header>
+    <div id="header"></div>
     <main>
         Welcome to Agrarian Pantry
     </main>
+
+    <footer>
+        <p>&copy; 2024 Agrarian Pantry</p>
+    </footer>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header').innerHTML = html;
+            });
+    </script>    
 </body>
 </html>
