@@ -2,21 +2,17 @@ body {
     font-family: Arial, sans-serif;
     background-color: #FEFBF6;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 header {
     width: 100%;
     display: flex;
-    background-color: #bad8d3;
     justify-content: center;
     align-items: center;
+    background-color: #bad8d3;
     border-radius: 5px;
-    padding: 0; 
-    margin: 0;
 }
 
 footer {
@@ -97,4 +93,36 @@ footer {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.product-category-section {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-image {
+    width: 45%;
+    margin: 0px;
+    border: 5px solid #bad8d3;
+    text-align: center;
+    transition: border 0.3s;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-category-title {
+    position: relative;
+    text-align: center;
+    background-color: #bad8d3;
+    padding: 10px;
+}
+
+.product-image:hover {
+    border: 1px solid #080808; 
 }
