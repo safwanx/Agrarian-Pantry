@@ -31,6 +31,17 @@ footer {
     height: 30px;
 }
 
+.social-icons {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
 .topnav {
     background-color: #bad8d3;
 }
@@ -126,3 +137,47 @@ footer {
 .product-image:hover {
     border: 2px solid #080808; 
 }
+
+.contact-box{
+    background-color: #bad8d3;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #91634e;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-details {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+

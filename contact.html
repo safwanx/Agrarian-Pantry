@@ -9,13 +9,49 @@
 <body>
     <div id="header"></div>
     <main>
-        Welcome to Agrarian Pantry
+            <h1>Contact Us</h1>
+            <div class="contact-box">
+                <form class="contact-form" action="process_form.php" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button id="submitButton" type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="contact-details">
+                <div>
+                    <h2>Contact Info</h2>
+                    <p>Email: info@agrarian-pantry.com<br> Phone: +966 123 456 789</p>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="./images/instagram-icon.png" alt="Instagram">
+                </a>
+
+                <a href="https://twitter.com" target="_blank">
+                    <img src="./images/twitter-icon.jpg" alt="Twitter">
+                </a>
+
+                <a href="mailto:info@agrarian-pantry.com" target="_blank">
+                    <img src="./images/email-icon.png" alt="Email">
+                </a>
+            </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Agrarian Pantry</p>
     </footer>
 
-    <script src="./scripts/header.js"></script>    
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/buttons.js"></script>    
 </body>
 </html>
