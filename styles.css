@@ -16,6 +16,7 @@ header {
 }
 
 footer {
+    margin-top: auto;
     text-align: center;
     padding: 10px;
     background-color: #bad8d3;
@@ -151,7 +152,6 @@ footer {
     margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-
 }
 
 .contact-form {
@@ -188,3 +188,39 @@ footer {
     justify-content: space-around;
 }
 
+
+/*account page*/
+.account-class {
+    max-width: 500px;
+    margin: 20px auto;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.sign-in-container, .sign-up-container {
+    max-width: 500px;
+    margin: 20px auto;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(194, 225, 225);
+}
+
+.sign-in-container input,
+.sign-up-container input {
+    margin-bottom: 10px;
+}
+
+.sign-in-container button,
+.sign-up-container button {
+    padding: 10px 10px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}

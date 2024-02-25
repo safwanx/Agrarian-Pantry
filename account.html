@@ -9,13 +9,36 @@
 <body>
     <div id="header"></div>
     <main>
-        Welcome to Agrarian Pantry
+        <section class="account-class">
+            <div class="sign-in-container">
+                <form id="signInForm">
+                    <h1>Sign In</h1>
+                    <input type="email" placeholder="Email" required><br>
+                    <input type="password" placeholder="Password" required><br>
+                    <button id="sign-in">Sign In</button>
+                </form>
+                <p>Don't have an account? <button id="sign-up-1">Sign Up</button></p>
+            </div>
+
+            <div class="sign-up-container">
+                <form id="signUpForm">
+                    <h1>Sign Up</h1>
+                    <input type="text" placeholder="Full Name" required><br>
+                    <input type="email" placeholder="Email" required><br>
+                    <input type="password" placeholder="Password" required><br>
+                    <button id="sign-up">Sign Up</button>
+                </form>
+                <p>Already have an account? <button id="sign-in-1">Sign In</button></p>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <p>&copy; 2024 Agrarian Pantry</p>
     </footer>
 
-    <script src="./scripts/header.js"></script>    
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/account.js"></script>    
 </body>
 </html>
