@@ -11,22 +11,22 @@
     <main>
         <section class="account-class">
             <div class="sign-in-container">
-                <form id="signInForm" method="post" action="account.php">
+                <form id="signInForm" method="post" action="./php/account.php">
                     <h1>Sign In</h1>
-                    <input type="email" placeholder="Email" required><br>
-                    <input type="password" placeholder="Password" required><br>
-                    <button id="sign-in">Sign In</button>
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <button id="sign-in" name="sign-in">Sign In</button>
                 </form>
                 <p>Don't have an account? <button id="sign-up-1">Sign Up</button></p>
             </div>
 
             <div class="sign-up-container">
-                <form id="signUpForm">
+                <form id="signUpForm" method="post" action="./php/signup.php">
                     <h1>Sign Up</h1>
-                    <input type="text" placeholder="Full Name" required><br>
-                    <input type="email" placeholder="Email" required><br>
-                    <input type="password" placeholder="Password" required><br>
-                    <button id="sign-up">Sign Up</button>
+                    <input type="text" name="name" placeholder="Full Name" required><br>
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <button id="sign-up" name="sign-up">Sign Up</button>
                 </form>
                 <p>Already have an account? <button id="sign-in-1">Sign In</button></p>
             </div>
