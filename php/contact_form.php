@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
+        header("refresh:2;url=../index.html");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
