@@ -4,7 +4,6 @@ USE agrarian_pantry;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
     password VARCHAR(255) NOT NULL,
     role ENUM('consumer', 'farmer') NOT NULL
@@ -22,7 +21,7 @@ CREATE TABLE products (
 );
 
 CREATE TABLE orders (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    orders_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     total_price DECIMAL(10, 2) NOT NULL,
     status ENUM('pending', 'completed', 'cancelled') NOT NULL DEFAULT 'pending',
@@ -41,7 +40,8 @@ CREATE TABLE order_items (
 );
 
 CREATE TABLE locations (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT NOT NULL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL
+    FOREIGN KEY (id) REFERENCES orders(orders_id)
 );
