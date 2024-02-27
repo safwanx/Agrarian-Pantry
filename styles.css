@@ -209,6 +209,12 @@ footer {
     padding: 20px;
     margin-top: 20px;
     background-color: rgb(194, 225, 225);
+    transform: scale(0.9);
+    transition: transform 0.5s;
+}
+
+.sign-in-container:hover, .sign-up-container:hover {
+    transform: scale(1);
 }
 
 .sign-in-container input,
