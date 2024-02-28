@@ -1,7 +1,7 @@
 <?php
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate input fields (you can add more validation as needed)
+    // Validate input fields
     $name = trim($_POST["name"]);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $message = trim($_POST["message"]);
@@ -24,16 +24,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Insert data into database
-    $sql = "INSERT INTO contact_form (name, email, message) VALUES ('$name', '$email', '$message')";
+    $stmt = $conn->prepare("INSERT INTO contact_form (name, email, message) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $message);
 
-    if ($conn->query($sql) === TRUE) {
+    // Insert data into database
+    if ($stmt->execute()) {
         echo "New record created successfully";
         header("refresh:2;url=../index.html");
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
+    $stmt->close();
     $conn->close();
 }
 ?>

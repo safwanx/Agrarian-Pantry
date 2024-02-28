@@ -17,9 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-in'])) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Verify the user's credentials
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $result = $conn->query($sql);
+    $stmt = $conn->prepare("SELECT id, name, email, password FROM users WHERE email=?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -32,14 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-in'])) {
             exit();
         } else {
             // Password is incorrect
-            header("Location: ../account.html?error=1");
+            header("Location: ../account.html?error=incorect-password");
             exit();
         }
     } else {
         // User not found
-        header("Location: ../account.html?error=1"); 
+        header("Location: ../account.html?error=user-not-found"); 
         exit();
     }
 
+    $stmt->close();
     $conn->close();
 }

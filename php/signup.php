@@ -19,9 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert the user into the database
-    $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
-    if ($conn->query($sql) === TRUE) {
+    // Insert user into database, prevent sqli
+    $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $hashed_password);
+
+    if ($stmt->execute()) {
         // User created successfully, redirect to sign in page
         header("Location: ../account.html");
         exit();
@@ -29,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
+    $stmt->close();
     $conn->close();
 }
 ?>
