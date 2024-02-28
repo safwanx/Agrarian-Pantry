@@ -3,8 +3,10 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: profile.php");
+    header("Location: account.html");
     exit;
+} else {
+    $user_id = $_SESSION['user_id'];
 }
 
 $servername = "localhost";
@@ -30,6 +32,12 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header("Location: index.html");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -49,6 +57,9 @@ $conn->close();
                 <p>Name: <?php echo $user_name; ?></p>
                 <p>Email: <?php echo $user_email; ?></p>
                 <p>Role: <?php echo $user_role; ?></p>
+                <form method="post">
+                    <button type="submit" name="logout">Logout</button>
+                </form>
             </div>
 
             <!--Display order history/ manage products based on user role-->
