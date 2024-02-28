@@ -230,3 +230,32 @@ footer {
     border: none;
     cursor: pointer;
 }
+
+/*styles for profile.php*/
+
+.profile-section {
+    max-width: 500px;
+    margin: 20px auto;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.profile-div {
+    max-width: 500px;
+    margin: 20px auto;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(194, 225, 225);
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+.profile-div:hover {
+    transform: scale(1);
+}

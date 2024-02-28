@@ -26,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-in'])) {
         if (password_verify($password, $row['password'])) {
             // Password is correct
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['user_name'] = $row['name'];
+            $_SESSION['user_email'] = $row['email'];
             header("Location: ../index.html");
             exit();
         } else {
