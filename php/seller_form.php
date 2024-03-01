@@ -25,8 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssss", $name, $email, $phone, $company, $message);
 
     if ($stmt->execute()) {
-        echo "Your form has been submitted successfully. We will be in touch shortly.";
-        header("refresh:2;url=../index.html");
+        header("refresh:3;url=../index.html");
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -35,3 +34,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seller</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="seller-page">
+        <h1>Your form has been submitted successfully. We will be in touch shortly.</h1>
+        <p>Redirecting to home page...</p>
+    </div>
+</body>
+</html>

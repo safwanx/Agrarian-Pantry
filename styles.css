@@ -202,6 +202,13 @@ footer {
 }
 
 
+.contact-page, .seller-page {
+    text-align: center;
+    margin-top: 100px;
+    color: black;
+}
+
+
 /*account page*/
 .account-class {
     max-width: 500px;

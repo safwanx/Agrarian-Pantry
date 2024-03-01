@@ -30,8 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert data into database
     if ($stmt->execute()) {
-        echo "Form submitted successfully. We will get back to you soon.";
-        header("refresh:2;url=../index.html");
+        header("refresh:3;url=../index.html");
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -40,3 +39,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="contact-page">
+        <h1>Your form has been submitted successfully. We will be in touch shortly.</h1>
+        <p>Redirecting to home page...</p>
+    </div>
+</body>
+</html>
