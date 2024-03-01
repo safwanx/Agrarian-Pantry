@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert data into database
     if ($stmt->execute()) {
-        echo "New record created successfully";
+        echo "Form submitted successfully. We will get back to you soon.";
         header("refresh:2;url=../index.html");
     } else {
         echo "Error: " . $stmt->error;

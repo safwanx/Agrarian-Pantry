@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssss", $name, $email, $phone, $company, $message);
 
     if ($stmt->execute()) {
-        echo "New record created successfully";
+        echo "Your form has been submitted successfully. We will be in touch shortly.";
         header("refresh:2;url=../index.html");
     } else {
         echo "Error: " . $stmt->error;
