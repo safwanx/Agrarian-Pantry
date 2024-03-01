@@ -1,164 +1,97 @@
-Yellow Cheese
-
-Description: Creamy and mild yellow cheese, perfect for sandwiches or snacks.
-Price: 20 Riyal
-
-Tomahawk (Beef Steak)
-
-Description: A large, flavorful Tomahawk steak, ideal for grilling or roasting.
-Price: 120 Riyal
-
-Strawberry
-
-Description: Fresh and juicy strawberries, a delightful and healthy snack.
-Price: 15 Riyal per punnet
-
-Sourdough Bread
-
-Description: Artisanal sourdough bread with a chewy crust and tangy flavor.
-Price: 25 Riyal per loaf
-
-Short Ribs
-
-Description: Tender and succulent short ribs, perfect for slow cooking or grilling.
-Price: 80 Riyal per kilogram
-
-Rye Bread
-
-Description: Dense and hearty rye bread, great for sandwiches or toasting.
-Price: 30 Riyal per loaf
-
-Potato
-
-Description: Versatile potatoes, suitable for various culinary applications.
-Price: 10 Riyal per kilogram
-
-Pomegranate
-
-Description: Sweet and tangy pomegranate, a nutritious and refreshing fruit.
-Price: 18 Riyal per piece
-
-Parsley
-
-Description: Fresh parsley, a flavorful herb that adds a vibrant touch to dishes.
-Price: 5 Riyal per bunch
-
-Papaya
-
-Description: Ripe and tropical papaya, rich in vitamins and antioxidants.
-Price: 12 Riyal per piece
-
-Onion
-
-Description: Essential cooking ingredient, adds depth of flavor to various dishes.
-Price: 8 Riyal per kilogram
-
-Meat Assortment
-
-Description: Assorted meat cuts for your cooking needs, including beef and chicken.
-Price: Varies by cut (check website for details)
-
-Chicken
-
-Description: Fresh chicken, versatile for a wide range of delicious recipes.
-Price: 15 Riyal per kilogram
-
-Mint
-
-Description: Aromatic mint leaves, perfect for garnishing or making refreshing beverages.
-Price: 6 Riyal per bunch
-
-Mangoes
-
-Description: Sweet and tropical mangoes, a delightful treat on their own or in dishes.
-Price: 14 Riyal per kilogram
-
-Lettuce
-
-Description: Crisp and fresh lettuce, ideal for salads or as a sandwich filler.
-Price: 7 Riyal per head
-
-Kiwi
-
-Description: Vibrant and nutritious kiwi fruit, a flavorful addition to your diet.
-Price: 10 Riyal per kilogram
-
-Feta Cheese
-
-Description: Tangy and crumbly feta cheese, great for salads and Mediterranean dishes.
-Price: 25 Riyal
-
-Eggs
-
-Description: Farm-fresh eggs, a versatile and essential kitchen staple.
-Price: 10 Riyal per dozen
-
-Eggplant
-
-Description: Versatile eggplant, perfect for grilling, roasting, or as a main ingredient in dishes.
-Price: 12 Riyal per kilogram
-
-Donut
-
-Description: Sweet and indulgent donut, a delightful treat for dessert or breakfast.
-Price: 5 Riyal per piece
-
-Cucumber
-
-Description: Crisp and refreshing cucumber, a great addition to salads or as a snack.
-Price: 6 Riyal per kilogram
-
-Croissant
-
-Description: Buttery and flaky croissant, a classic pastry for breakfast or anytime.
-Price: 8 Riyal per piece
-
-Corn
-
-Description: Fresh and sweet corn, ideal for boiling, grilling.
-Price: 3 Riyal per cob
-
-Cookies
-
-Description: Delicious assorted cookies, perfect for satisfying your sweet cravings.
-Price: 15 Riyal per box
-
-Cinnabon
-
-Description: Irresistible Cinnabon, a sweet and cinnamon-flavored pastry.
-Price: 12 Riyal per piece
-
-Chocolate Cake
-
-Description: Rich and decadent chocolate cake, a perfect dessert for any occasion.
-Price: 40 Riyal per cake
-
-Chilis
-
-Description: Fresh chili peppers, adding spice and flavor to your dishes.
-Price: 8 Riyal per 100 grams
-
-Carrot
-
-Description: Sweet and crunchy carrots, great for snacking or cooking.
-Price: 6 Riyal per kilogram
-
-Butter
-
-Description: Creamy and rich butter, a staple for cooking and baking.
-Price: 15 Riyal per block
-
-Beef
-
-Description: High-quality beef, perfect for roasts, steaks, or stews.
-Price: 50 Riyal per kilogram
-
-Beef Mince
-
-Description: Finely ground beef mince, versatile for a variety of dishes.
-Price: 25 Riyal per kilogram
-
-Apples
-
-Description: Fresh and crisp apples, a classic and nutritious fruit.
-Price: 12 Riyal per kilogram
+**Greens:**
+1. Lettuce
+   - Description: Crisp and fresh lettuce, ideal for salads or as a sandwich filler.
+   - Price: 7 Riyal per head
+2. Mint
+   - Description: Fresh mint, a flavorful herb that adds a vibrant touch to dishes.
+   - Price: 5 Riyal per bunch
+3. Cucumber
+   - Description: Crisp and refreshing cucumber, a great addition to salads or as a snack.
+   - Price: 6 Riyal per kilogram
+4. Kiwi
+   - Description: Vibrant and nutritious kiwi fruit, a flavorful addition to your diet.
+   - Price: 10 Riyal per kilogram
+5. Strawberry
+   - Description: Fresh and juicy strawberries, a delightful and healthy snack.
+   - Price: 15 Riyal per punnet
+6. Papaya
+   - Description: Ripe and tropical papaya, rich in vitamins and antioxidants.
+   - Price: 12 Riyal per piece
+7. Pomegranate
+   - Description: Sweet and tangy pomegranate, a nutritious and refreshing fruit.
+   - Price: 18 Riyal per piece
+8. Potato
+   - Description: Versatile potatoes, suitable for various culinary applications.
+   - Price: 10 Riyal per kilogram
+9. Carrot
+   - Description: Sweet and crunchy carrots, great for snacking or cooking.
+   - Price: 6 Riyal per kilogram
+10. Corn
+    - Description: Fresh and sweet corn, ideal for boiling, grilling.
+    - Price: 3 Riyal per cob
+11. Apples
+    - Description: Crisp and juicy apples, a classic and healthy snack.
+    - Price: 10 Riyal per kilogram
+12. Mangoes
+    - Description: Sweet and tropical mangoes, a delicious and refreshing treat.
+    - Price: 15 Riyal per kilogram
+
+**Meat:**
+1. Lamb
+   - Description: Tender and flavorful lamb, perfect for roasting or grilling.
+   - Price: 40 Riyal per kilogram
+2. Beef
+   - Description: High-quality beef, perfect for roasts, steaks, or stews.
+   - Price: 50 Riyal per kilogram
+3. Beef Mince
+   - Description: Finely ground beef mince, versatile for a variety of dishes.
+   - Price: 25 Riyal per kilogram
+4. Chicken
+   - Description: Fresh chicken, versatile for a wide range of delicious recipes.
+   - Price: 15 Riyal per kilogram
+5. Short Ribs
+   - Description: Tender and succulent short ribs, perfect for slow cooking or grilling.
+   - Price: 80 Riyal per kilogram
+6. Tomahawk (Beef Steak)
+   - Description: A large, flavorful Tomahawk steak, ideal for grilling or roasting.
+   - Price: 120 Riyal
+
+**Baked:**
+1. Croissant
+   - Description: Buttery and flaky croissant, a classic pastry for breakfast or anytime.
+   - Price: 8 Riyal per piece
+2. Sourdough Bread
+   - Description: Artisanal sourdough bread with a chewy crust and tangy flavor.
+   - Price: 25 Riyal per loaf
+3. Rye Bread
+   - Description: Dense and hearty rye bread, great for sandwiches or toasting.
+   - Price: 30 Riyal per loaf
+4. Donut
+   - Description: Sweet and indulgent donut, a delightful treat for dessert or breakfast.
+   - Price: 5 Riyal per piece
+5. Cookies
+   - Description: Delicious assorted cookies, perfect for satisfying your sweet cravings.
+   - Price: 15 Riyal per box
+6. Chocolate Cake
+   - Description: Rich and decadent chocolate cake, a perfect dessert for any occasion.
+   - Price: 40 Riyal per cake
+
+**Dairy:**
+1. Feta Cheese
+   - Description: Tangy and crumbly feta cheese, great for salads and Mediterranean dishes.
+   - Price: 25 Riyal
+2. Yellow Cheese
+   - Description: Creamy and mild yellow cheese, perfect for sandwiches or snacks.
+   - Price: 20 Riyal
+3. Butter
+   - Description: Creamy and rich butter, a staple for cooking and baking.
+   - Price: 15 Riyal per block
+4. Eggs
+   - Description: Farm-fresh eggs, a versatile and essential kitchen staple.
+   - Price: 10 Riyal per dozen
+5. Milk
+   - Description: Fresh and creamy milk, straight from the farm to your table.
+   - Price: 8 Riyal per liter
+6. Yogurt
+    - Description: Smooth and tangy yogurt, a nutritious and delicious addition to your diet.
+    - Price: 12 Riyal per kilogram
