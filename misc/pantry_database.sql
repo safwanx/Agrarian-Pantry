@@ -12,6 +12,7 @@ CREATE TABLE users (
 
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_type ENUM('greens', 'meat', 'dairy', 'baked') NOT NULL,
     farmer_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     description TEXT,
@@ -31,18 +32,18 @@ CREATE TABLE orders (
 );
 
 CREATE TABLE order_items (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
-    product_id INT NOT NULL,
+    ordered_product_id INT NOT NULL,
     quantity INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (order_id) REFERENCES orders(orders_id),
-    FOREIGN KEY (product_id) REFERENCES products(product_id)
+    FOREIGN KEY (ordered_product_id) REFERENCES products(product_id)
 );
 
 CREATE TABLE locations (
-    id INT NOT NULL PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
-    FOREIGN KEY (id) REFERENCES orders(orders_id)
+    FOREIGN KEY (id) REFERENCES orders(orders_idid)
 );
