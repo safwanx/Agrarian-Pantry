@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Seller</title>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section class="seller-section">
+            <div class="seller-top">
+                <h1>Become a Seller</h1>
+                <p>Interested in selling your products on our platform? Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+            <div class="seller-box">
+                <form class="seller-form" action="./php/seller_form.php" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                    
+                    <label for="company">Company:</label><br>
+                    <input type="text" id="company" name="company" required><br><br>
+                    
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="6" required></textarea><br><br>
+                    
+                    <button id="submitButton" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/footer.js"></script>
+    <script src="./scripts/sellerButton.js"></script>
+</body>
+</html>

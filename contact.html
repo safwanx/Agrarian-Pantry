@@ -10,8 +10,10 @@
     <div id="header"></div>
     <main>
         <section class="contact-section">
-            <h1>Contact Us</h1>
-            <p>Have a question or want to get in touch? Send us a message and we'll get back to you as soon as possible.</p>
+            <div class="contact-top">
+                <h1>Contact Us</h1>
+                <p>Have a question or want to get in touch? Send us a message and we'll get back to you as soon as possible.</p>
+            </div>
             <div class="contact-box">
                 <form class="contact-form" action="./php/contact_form.php" method="post">
                     <label for="name">Name:</label><br>
@@ -20,6 +22,9 @@
                     <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" required><br><br>
 
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                    
                     <label for="message">Message:</label><br>
                     <textarea id="message" name="message" rows="6" required></textarea>
 
@@ -53,7 +58,7 @@
     <div id="footer"></div>
 
     <script src="./scripts/header.js"></script>
-    <script src="./scripts/buttons.js"></script>
+    <script src="./scripts/contactButtons.js"></script>
     <script src="./scripts/footer.js"></script>    
 </body>
 </html>
