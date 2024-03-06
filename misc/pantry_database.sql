@@ -45,7 +45,7 @@ CREATE TABLE locations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
-    FOREIGN KEY (id) REFERENCES orders(orders_idid)
+    FOREIGN KEY (order_id) REFERENCES orders(orders_id)
 );
 
 CREATE TABLE order_history (
