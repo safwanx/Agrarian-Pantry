@@ -47,3 +47,11 @@ CREATE TABLE locations (
     address VARCHAR(255) NOT NULL,
     FOREIGN KEY (id) REFERENCES orders(orders_idid)
 );
+
+CREATE TABLE order_history (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_history_id INT NOT NULL,
+    status ENUM('pending', 'completed', 'cancelled') NOT NULL DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_history_id) REFERENCES orders(orders_id)
+);
