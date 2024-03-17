@@ -6,8 +6,10 @@ CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    phone VARCHAR(20) NOT NULL, 
+    phone VARCHAR(20), 
     password VARCHAR(255) NOT NULL,
+    company VARCHAR(100),
+    message TEXT,
     role ENUM('Customer', 'Seller') NOT NULL
 );
 
@@ -51,7 +53,7 @@ CREATE TABLE locations (
 );
 
 CREATE TABLE order_history (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
     order_history_id INT NOT NULL,
     status ENUM('pending', 'completed', 'cancelled') NOT NULL DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

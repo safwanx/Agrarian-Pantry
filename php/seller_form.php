@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     $stmt = $conn->prepare("INSERT INTO users (name, email, phone, password, company, message) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $name, $email, $phone, $password, $company, $message);
+    $stmt->bind_param("ssssss", $name, $email, $phone, $hashed_password, $company, $message);
 
     if ($stmt->execute()) {
         header("refresh:3;url=../index.html");
