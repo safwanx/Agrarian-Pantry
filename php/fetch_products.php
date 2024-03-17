@@ -17,12 +17,10 @@
     $result = $stmt->get_result();
 
     $products = array();
-    while ($row = $result->fetch_assoc()) {
+    while($row = mysqli_fetch_assoc($result)) {
         $products[] = $row;
     }
 
-    $stmt->close();
+    mysqli_close($conn);
     echo json_encode($products);
-    
-    $conn->close();
 ?>
