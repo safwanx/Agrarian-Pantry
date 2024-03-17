@@ -3,10 +3,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST["name"]);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = trim($_POST["phone"]);
+    $password = trim($_POST["password"]);
     $company = trim($_POST["company"]); 
     $message = trim($_POST["message"]);
 
-    if (empty($name) || empty($email) || empty($phone) || empty($company) || empty($message)) {
+    if (empty($name) || empty($email) || empty($phone) || empty($password) || empty($company) || empty($message)) {
         echo "Please fill all fields.";
         exit;
     }
@@ -21,8 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $stmt = $conn->prepare("INSERT INTO seller_form (name, email, phone, company, message) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $name, $email, $phone, $company, $message);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    $stmt = $conn->prepare("INSERT INTO seller_form (name, email, phone, passowrd, company, message) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $name, $email, $phone, $password, $company, $message);
 
     if ($stmt->execute()) {
         header("refresh:3;url=../index.html");
