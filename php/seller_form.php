@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO seller_form (name, email, phone, passowrd, company, message) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO users (name, email, phone, password, company, message) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $email, $phone, $password, $company, $message);
 
     if ($stmt->execute()) {
