@@ -14,7 +14,7 @@ CREATE TABLE users (
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     product_type ENUM('greens', 'meat', 'dairy', 'baked') NOT NULL,
-    farmer_id INT NOT NULL,
+    seller_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     description TEXT,
     price DECIMAL(10, 2) NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE order_history (
 );
 
 -- Inserting data into the users table
-INSERT INTO products (product_type, farmer_id, name, description, price, quantity, image_url) VALUES
+INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url) VALUES
 ('greens', 1001, 'Lettuce', 'Crisp and fresh lettuce, ideal for salads or as a sandwich filler.', 7.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FLettuce.png?alt=media&token=00116c9d-e623-406d-a361-0195d2821c2d'),
 ('greens', 1001, 'Mint', 'Fresh mint, a flavorful herb that adds a vibrant touch to dishes.', 5.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FMint.png?alt=media&token=d212f383-4715-4d5e-961f-2f4afa305fa7'),
 ('greens', 1001, 'Cucumber', 'Crisp and refreshing cucumber, a great addition to salads or as a snack.', 6.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCucumber.jpg?alt=media&token=53439e26-f4f5-4879-beb3-f0b711bf0b69'),

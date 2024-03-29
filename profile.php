@@ -59,6 +59,14 @@ if (isset($_POST['logout'])) {
                 <p>Email: <?php echo $user_email; ?></p>
                 <p>Phone: <?php echo $user_phone; ?></p>
                 <p>Role: <?php echo $user_type; ?></p>
+                <?php 
+                    if ($user_type === 'Customer') {
+                        include 'customer_profile.html';
+
+                    } elseif ($user_type === 'Seller') {
+                        include 'seller_profile.html';
+                    };
+                ?>
                 <form method="post">
                     <button type="submit" name="logout">Logout</button>
                 </form>
@@ -69,7 +77,6 @@ if (isset($_POST['logout'])) {
                 if ($user_type === 'Customer') {
 
                 } elseif ($user_type === 'Seller') {
-                    include 'seller_profile.html';
                 };
             ?>
         </section>

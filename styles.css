@@ -215,7 +215,7 @@ footer {
 
 
 /*account page*/
-.account-class {
+.account-class, .modify-class {
     max-width: 500px;
     margin: 20px auto;
     align-items: center;
@@ -225,7 +225,7 @@ footer {
     margin-top: 20px;
 }
 
-.sign-in-container, .sign-up-container {
+.sign-in-container, .sign-up-container, .modify-class {
     max-width: 500px;
     margin: 20px auto;
     align-items: center;
@@ -238,17 +238,17 @@ footer {
     transition: transform 0.5s;
 }
 
-.sign-in-container:hover, .sign-up-container:hover {
+.sign-in-container:hover, .sign-up-container:hover, .modify-class:hover {
     transform: scale(1);
 }
 
 .sign-in-container input,
-.sign-up-container input {
+.sign-up-container input, .modify-class input {
     margin-bottom: 10px;
 }
 
 .sign-in-container button,
-.sign-up-container button {
+.sign-up-container button, .modify-class button{
     padding: 10px 10px;
     background-color: #000000;
     color: #ffffff;
