@@ -46,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['modify-password'])) {
 
                 if ($stmt->execute()) {
                     echo "Password changed successfully";
-
                     header("Location: ../account.html");
                     session_unset();
                     exit();
