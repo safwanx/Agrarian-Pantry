@@ -59,7 +59,12 @@ if (isset($_POST['logout'])) {
                 <p>Email: <?php echo $user_email; ?></p>
                 <p>Phone: <?php echo $user_phone; ?></p>
                 <p>Role: <?php echo $user_type; ?></p>
-                <?php 
+                <form method="post">
+                    <button type="submit" name="logout">Logout</button>
+                </form>
+            </div>
+            <div class="profile-div">
+            <?php 
                     if ($user_type === 'Customer') {
                         include 'customer_profile.html';
 
@@ -67,9 +72,6 @@ if (isset($_POST['logout'])) {
                         include 'seller_profile.html';
                     };
                 ?>
-                <form method="post">
-                    <button type="submit" name="logout">Logout</button>
-                </form>
             </div>
 
             <!--Display order history/ manage products based on user role-->
