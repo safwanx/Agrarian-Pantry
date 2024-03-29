@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $phone = $_POST['phone'];
 
     $servername = "localhost";
     $username = "root";
@@ -20,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user into database, prevent sqli
-    $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $hashed_password);
+    $stmt = $conn->prepare("INSERT INTO users (name, email, password, phone) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $email, $hashed_password, $phone);
 
     if ($stmt->execute()) {
         // User created successfully, redirect to sign in page

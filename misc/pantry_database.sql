@@ -9,7 +9,6 @@ CREATE TABLE users (
     phone VARCHAR(20), 
     password VARCHAR(255) NOT NULL,
     company VARCHAR(100),
-    message TEXT,
     role ENUM('Customer', 'Seller') NOT NULL
 );
 

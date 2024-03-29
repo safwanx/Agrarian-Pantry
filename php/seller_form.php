@@ -5,9 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = trim($_POST["phone"]);
     $password = trim($_POST["password"]);
     $company = trim($_POST["company"]); 
-    $message = trim($_POST["message"]);
 
-    if (empty($name) || empty($email) || empty($phone) || empty($password) || empty($company) || empty($message)) {
+    if (empty($name) || empty($email) || empty($phone) || empty($password) || empty($company)) {
         echo "Please fill all fields.";
         exit;
     }
@@ -24,8 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO users (name, email, phone, password, company, message) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $name, $email, $phone, $hashed_password, $company, $message);
+    $stmt = $conn->prepare("INSERT INTO users (name, email, phone, password, company) VALUES (?, ?, ?, ?, ?)");
+    if ($stmt === false) {
+        die("Error preparing statement: " . $conn->error);
+    }
+    $stmt->bind_param("sssss", $name, $email, $phone, $hashed_password, $company);
 
     if ($stmt->execute()) {
         header("refresh:3;url=../index.html");
