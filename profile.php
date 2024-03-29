@@ -27,7 +27,8 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $user_name = $row['name'];
     $user_email = $row['email'];
-    $user_role = $row['role'];
+    $user_phone = $row['phone'];
+    $user_type = $row['type'];
 }
 
 $conn->close();
@@ -56,7 +57,8 @@ if (isset($_POST['logout'])) {
                 <h1>Welcome to your profile, <?php echo $user_name; ?></h1>
                 <p>Name: <?php echo $user_name; ?></p>
                 <p>Email: <?php echo $user_email; ?></p>
-                <p>Role: <?php echo $user_role; ?></p>
+                <p>Phone: <?php echo $user_phone; ?></p>
+                <p>Role: <?php echo $user_type; ?></p>
                 <form method="post">
                     <button type="submit" name="logout">Logout</button>
                 </form>
@@ -64,10 +66,10 @@ if (isset($_POST['logout'])) {
 
             <!--Display order history/ manage products based on user role-->
             <?php 
-                if ($user_role === 'consumer') {
+                if ($user_type === 'Customer') {
 
-                } elseif ($user_role === 'farmer') {
-
+                } elseif ($user_type === 'Seller') {
+                    include 'seller_profile.html';
                 };
             ?>
         </section>

@@ -8,8 +8,7 @@ CREATE TABLE users (
     email VARCHAR(100) NOT NULL,
     phone VARCHAR(20), 
     password VARCHAR(255) NOT NULL,
-    company VARCHAR(100),
-    role ENUM('Customer', 'Seller') NOT NULL
+    type ENUM('Customer', 'Seller') NOT NULL
 );
 
 CREATE TABLE products (

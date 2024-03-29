@@ -146,9 +146,9 @@ footer {
     border: 5px solid #080808; 
 }
 
-/*styles for contact and seller form*/
+/*styles for contact form*/
 
-.contact-section, .seller-section {
+.contact-section {
     max-width: 650px;
     margin: 20px auto;
     align-items: center;
@@ -158,13 +158,13 @@ footer {
     margin-top: 20px;
 }
 
-.contact-top, .seller-top  {
+.contact-top{
     background-color: #bad8d3;
     padding: 10px;
     border-radius: 8px;
 }
 
-.contact-box, .seller-box {
+.contact-box{
     background-color: #bad8d3;
     padding: 20px;
     margin-top: 20px;
@@ -172,28 +172,27 @@ footer {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form, .seller-form {
+.contact-form{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contact-form label, .seller-form label{
+.contact-form label{
     margin-bottom: 8px;
     font-weight: bold;
 }
 
 .contact-form input,
-.contact-form textarea, 
-.seller-form input, .seller-form textarea{
+.contact-form textarea{
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
 }
 
-.contact-form button, .seller-form button{
+.contact-form button{
     padding: 10px 20px;
     background-color: #000000;
     color: #ffffff;
@@ -208,7 +207,7 @@ footer {
 }
 
 
-.contact-page, .seller-page {
+.contact-page {
     text-align: center;
     margin-top: 100px;
     color: black;
