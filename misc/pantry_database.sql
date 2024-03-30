@@ -20,7 +20,7 @@ CREATE TABLE products (
     price DECIMAL(10, 2) NOT NULL,
     quantity INT NOT NULL,
     image_url VARCHAR(255),
-    FOREIGN KEY (farmer_id) REFERENCES users(id)
+    FOREIGN KEY (seller_id) REFERENCES users(id)
 );
 
 CREATE TABLE orders (
