@@ -58,6 +58,15 @@ CREATE TABLE order_history (
     FOREIGN KEY (order_id) REFERENCES orders(orders_id)
 );
 
+CREATE TABLE contact_form (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    message TEXT NOT NULL
+);
+
+
 -- Inserting data into the users table
 INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url) VALUES
 ('greens', 1001, 'Lettuce', 'Crisp and fresh lettuce, ideal for salads or as a sandwich filler.', 7.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FLettuce.png?alt=media&token=00116c9d-e623-406d-a361-0195d2821c2d'),

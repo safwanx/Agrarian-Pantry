@@ -11,7 +11,7 @@
     <main>
         <h1>Green Produce</h1>
         <?php
-            require 'database.php';
+            require './php/database.php';
             $sql = "SELECT * FROM products WHERE category='green'";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
