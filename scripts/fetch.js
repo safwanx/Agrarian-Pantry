@@ -1,4 +1,4 @@
-fetch('fetch_products.php')
+fetch('./php/fetch_products.php')
             .then(response => response.json())
             .then(products => {
                 let productsDiv = document.getElementById('products');

@@ -8,15 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
     $phone = $_POST['phone'];
     $type = $_POST['type'];
 
-    $servername = "localhost";
-    $username = "root";
-    $dbpassword = "";
-    $dbname = "agrarian_pantry";
-
-    $conn = new mysqli($servername, $username, $dbpassword, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    require 'database.php';
 
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);

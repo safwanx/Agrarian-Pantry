@@ -9,15 +9,7 @@ if (!isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "agrarian_pantry";
-
-$conn = new MySQLi($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require 'database.php';
 
 $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM users WHERE id = $user_id";

@@ -6,16 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-in'])) {
     $password = $_POST['password'];
 
 
-    $servername = "localhost";
-    $username = "root";
-    $dbpassword = "";
-    $dbname = "agrarian_pantry";
-
-    $conn = new mysqli($servername, $username, $dbpassword, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    require 'database.php';
 
     $stmt = $conn->prepare("SELECT id, name, email, password FROM users WHERE email=?");
     $stmt->bind_param("s", $email);
