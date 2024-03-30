@@ -146,6 +146,34 @@ footer {
     border: 5px solid #080808; 
 }
 
+/* Styling for product display*/
+.product-display-section {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-display-class {
+    width: 30%; /* Adjust the width to control the size of the images */
+    margin: 10px;
+    border: 5px solid #bad8d3;
+    text-align: center;
+    transition: border 0.3s;
+}
+
+.product-display-class img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover; /* This property ensures the image maintains its aspect ratio */
+}
+
+.product-display-class:hover {
+    border: 5px solid #080808; 
+}
+
 /*styles for contact form*/
 
 .contact-section {
