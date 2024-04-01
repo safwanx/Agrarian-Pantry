@@ -1,42 +1,104 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #FEFBF6;
+*{
     margin: 0;
-    text-align: center;
-    /* align-items: center; - removed*/
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    /* Flexbox for Footer Positioning */
-    min-height: 100vh;
+body {
+  background-color: #fefbf6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* header.html */
+
+.navigation-bar {
+    background-color: #bad8d3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+}
+
+.navigation-bar ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation-bar li {
+    height: 50px;
+}
+
+.navigation-bar a{
+    height: 100%;
+    padding: 0 24px;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #307a70;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navigation-bar li a:hover{
+    background-color: #fefbf6;
+    border-radius: 18px;
+}
+
+.navigation-bar .logo{
+    width: 200px;
+    height: auto;
+    margin: 30px;
+}
+
+.navigation-bar .sign-in{
+    background-color: #307a70;
+    border-radius: 18px;
+    color: #fefbf6;
+    padding: 0 24px;
+    margin: 0 50px 0 10px;
+}
+
+.navigation-bar .sign-in:hover{
+    color: #307a70;
+}
+
+/* .navigation-bar .products-content{
+    background-color: red;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
+    align-items: flex-start;
+    justify-content: flex-start;
+} */
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #bad8d3;
-    border-radius: 5px;
-}
+/* header.html */
+
+/* footer.html */
 
 footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 10px;
-    background-color: #bad8d3;
+  margin-top: auto;
+  text-align: left;
+  padding: 30px;
+  color: gray;
+  font-size: 14px;
 }
 
-.logo {
-    width: 250px;
-    height: auto;
-}
+/* footer.html */
 
-.icon {
-    width: 30px;
-    height: 30px;
+/* index.html */
+.first-panel{
+  background-color: #bad8d3;
 }
+/* index.html */
 
 .social-icons a {
     margin: 0 10px;
@@ -50,89 +112,25 @@ footer {
     align-items: center;
 }
 
-.topnav {
-    background-color: #bad8d3;
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a.active {
-    background-color: #bad8d3;
-    color: rgb(0, 0, 0);
-}
-
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-    background-color:#FEFBF6;
-    color: rgb(0, 0, 0);
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 17px;
-    border: none;
-    outline: none;
-    color: rgb(1, 1, 1);
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:#bad8d3;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .product-category-section {
-    max-width: 800px;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .product-image {
-    width: 45%;
-    margin: 10px;
-    border: 5px solid #bad8d3;
-    text-align: center;
-    transition: border 0.3s;
+  width: 45%;
+  margin: 10px;
+  border: 5px solid #bad8d3;
+  text-align: center;
+  transition: border 0.3s;
 }
 
 .product-image img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* .product-category-title {
@@ -143,172 +141,177 @@ footer {
 } */
 
 .product-image:hover {
-    border: 5px solid #080808; 
+  border: 5px solid #080808;
 }
 
 /* Styling for product display*/
 .product-display-section {
-    max-width: 800px;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-display-class {
-    width: 30%; /* Adjust the width to control the size of the images */
-    margin: 10px;
-    border: 5px solid #bad8d3;
-    text-align: center;
-    transition: border 0.3s;
+  width: 30%; /* Adjust the width to control the size of the images */
+  margin: 10px;
+  border: 5px solid #bad8d3;
+  text-align: center;
+  transition: border 0.3s;
 }
 
 .product-display-class img {
-    max-width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover; /* This property ensures the image maintains its aspect ratio */
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover; /* This property ensures the image maintains its aspect ratio */
 }
 
 .product-display-class:hover {
-    border: 5px solid #080808; 
+  border: 5px solid #080808;
 }
 
 /*styles for contact form*/
 
 .contact-section {
-    max-width: 650px;
-    margin: 20px auto;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
+  max-width: 650px;
+  margin: 20px auto;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
 }
 
-.contact-top{
-    background-color: #bad8d3;
-    padding: 10px;
-    border-radius: 8px;
+.contact-top {
+  background-color: #bad8d3;
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.contact-box{
-    background-color: #bad8d3;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+.contact-box {
+  background-color: #bad8d3;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.contact-form label{
-    margin-bottom: 8px;
-    font-weight: bold;
+.contact-form label {
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 .contact-form input,
-.contact-form textarea{
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
 }
 
-.contact-form button{
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 .contact-details {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
 }
-
 
 .contact-page {
-    text-align: center;
-    margin-top: 100px;
-    color: black;
+  text-align: center;
+  margin-top: 100px;
+  color: black;
 }
-
 
 /*account page*/
-.account-class, .modify-class {
-    max-width: 500px;
-    margin: 20px auto;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
+.account-class,
+.modify-class {
+  max-width: 500px;
+  margin: 20px auto;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
 }
 
-.sign-in-container, .sign-up-container, .modify-class {
-    max-width: 500px;
-    margin: 20px auto;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-    background-color: rgb(194, 225, 225);
-    transform: scale(0.9);
-    transition: transform 0.5s;
+.sign-in-container,
+.sign-up-container,
+.modify-class {
+  max-width: 500px;
+  margin: 20px auto;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgb(194, 225, 225);
+  transform: scale(0.9);
+  transition: transform 0.5s;
 }
 
-.sign-in-container:hover, .sign-up-container:hover, .modify-class:hover {
-    transform: scale(1);
+.sign-in-container:hover,
+.sign-up-container:hover,
+.modify-class:hover {
+  transform: scale(1);
 }
 
 .sign-in-container input,
-.sign-up-container input, .modify-class input {
-    margin-bottom: 10px;
+.sign-up-container input,
+.modify-class input {
+  margin-bottom: 10px;
 }
 
 .sign-in-container button,
-.sign-up-container button, .modify-class button{
-    padding: 10px 10px;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
+.sign-up-container button,
+.modify-class button {
+  padding: 10px 10px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 /*styles for profile.php*/
 
 .profile-section {
-    max-width: 500px;
-    margin: 20px auto;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .profile-div {
-    max-width: 500px;
-    margin: 20px auto;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-    background-color: rgb(194, 225, 225);
-    transform: scale(0.9);
-    transition: transform 0.3s;
+  max-width: 500px;
+  margin: 20px auto;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgb(194, 225, 225);
+  transform: scale(0.9);
+  transition: transform 0.3s;
 }
 
 .profile-div:hover {
-    transform: scale(1);
+  transform: scale(1);
 }
