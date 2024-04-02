@@ -25,7 +25,6 @@ body {
     height: auto;
     top: 0;
     left: 0;
-    z-index: 999;
 }
 
 .navigation-bar ul {
@@ -37,19 +36,19 @@ body {
 }
 
 .navigation-bar li {
-    height: 50px;
+    height: 40px;
 }
 
 .navigation-bar a{
     height: 100%;
-    padding: 0 24px;
-    margin: 0 10px 0 0;
+    padding: 0 16px;
+    margin-right: 4px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #307a70;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .navigation-bar li a:hover{
@@ -58,17 +57,16 @@ body {
 }
 
 .navigation-bar .logo{
-    width: 200px;
+    width: 110px;
     height: auto;
-    margin: 30px;
+    margin: 8px;
 }
 
 .navigation-bar .sign-in{
     background-color: #307a70;
-    border-radius: 18px;
-    color: #fefbf6;
-    padding: 0 24px;
-    margin: 0 50px 0 10px;
+    border-radius: 18px; 
+    color: #fefbf6; 
+    margin: 0 30px 0 4px;
 }
 
 .navigation-bar .sign-in:hover{
