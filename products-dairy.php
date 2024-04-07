@@ -33,6 +33,12 @@ $result = $conn->query($sql);
                         <h2><?php echo $row['name']; ?></h2>
                         <p><?php echo $row['description']; ?></p>
                         <p>Price: $<?php echo $row['price']; ?></p>
+                        <form method="post" action="./php/add_to_cart.php">
+                            <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
+                            <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
+                            <input type="hidden" name="product_price" value="<?php echo $row['price']; ?>">
+                            <button type="submit">Add to Cart</button>
+                        </form>
                     </div>
                     <?php
                 }

@@ -13,7 +13,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Meat</title>
 </head>
 <style>
@@ -31,6 +31,12 @@ $result = $conn->query($sql);
                         <h2><?php echo $row['name']; ?></h2>
                         <p><?php echo $row['description']; ?></p>
                         <p>Price: $<?php echo $row['price']; ?></p>
+                        <form action="./php/add_to_cart.php" method="post">
+                            <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
+                            <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
+                            <input type="hidden" name="product_price" value="<?php echo $row['price']; ?>">
+                            <button type="submit">Add to Cart</button>
+                        </form>
                     </div>
                 <?php }
             } else {
@@ -43,4 +49,5 @@ $result = $conn->query($sql);
     <script src="./scripts/footer.js"></script>
 </body>
 </html>
-<?php $conn->close(); ?>
+<?php $conn->close(); 
+?>
