@@ -16,9 +16,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="styles.css">
     <title>Green Produce</title>
 </head>
-<style>
-    <?php include 'styles.css'; ?>
-</style>
+
 <body>
     <div id="header"></div>
     <main>

@@ -16,9 +16,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="./styles.css">
     <title>Meat</title>
 </head>
-<style>
-    <?php include 'styles.css'; ?>
-</style>
+
 <body>
     <div id="header"></div>
     <main>
@@ -35,7 +33,7 @@ $result = $conn->query($sql);
                             <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
                             <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
                             <input type="hidden" name="product_price" value="<?php echo $row['price']; ?>">
-                            <button type="submit">Add to Cart</button>
+                            <button id="add-to-crt-btn" type="submit">Add to Cart</button>
                         </form>
                     </div>
                 <?php }
