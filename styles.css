@@ -255,7 +255,8 @@ footer {
 
 .sign-in-container,
 .sign-up-container,
-.modify-class {
+.modify-class, 
+.cart-container {
   max-width: 500px;
   margin: 20px auto;
   align-items: center;
@@ -270,7 +271,8 @@ footer {
 
 .sign-in-container:hover,
 .sign-up-container:hover,
-.modify-class:hover {
+.modify-class:hover, 
+.cart-container:hover {
   transform: scale(1);
 }
 
@@ -317,4 +319,22 @@ footer {
 
 .profile-div:hover {
   transform: scale(1);
+}
+
+/*cart items style*/
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cart-item > div {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+.cart-item img {
+  max-width: 100%;
+  height: auto;
+}
+.cart-item select {
+  width: 50px;
 }

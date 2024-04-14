@@ -1,11 +1,20 @@
 <?php
 session_start();
 
-// Check if the product ID, name, and price are set
-if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST['product_price'])) {
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../account.html");
+    exit;
+} else {
+    $user_id = $_SESSION['user_id'];
+}
+
+// Check if the product ID, name, price, and image are set
+if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST['product_price']) && isset($_POST['product_image'])) {
     $product_id = $_POST['product_id'];
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
+    $product_image = $_POST['product_image'];
 
     // Initialize the cart if it doesn't exist
     if (!isset($_SESSION['cart'])) {
@@ -26,7 +35,8 @@ if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST
         $_SESSION['cart'][] = array(
             'id' => $product_id,
             'name' => $product_name,
-            'price' => $product_price
+            'price' => $product_price,
+            'image_url' => $product_image
         );
     }
 

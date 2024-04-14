@@ -33,6 +33,7 @@ $result = $conn->query($sql);
                             <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
                             <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
                             <input type="hidden" name="product_price" value="<?php echo $row['price']; ?>">
+                            <input type="hidden" name="product_image" value="<?php echo $row['image_url']; ?>">
                             <button id="add-to-crt-btn" type="submit">Add to Cart</button>
                         </form>
                     </div>
