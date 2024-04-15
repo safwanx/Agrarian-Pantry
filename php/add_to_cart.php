@@ -9,43 +9,33 @@ if (!isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 }
 
-// Check if the product ID, name, price, and image are set
 if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST['product_price']) && isset($_POST['product_image'])) {
     $product_id = $_POST['product_id'];
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
     $product_image = $_POST['product_image'];
 
-    // Initialize the cart if it doesn't exist
-    if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
-    }
-
     // Check if the product is already in the cart
-    $found = false;
-    foreach ($_SESSION['cart'] as $item) {
-        if ($item['id'] == $product_id) {
-            $found = true;
-            break;
-        }
-    }
+    $index = array_search($product_id, array_column($_SESSION['cart'], 'product_id'));
 
-    // If the product is not in the cart, add it
-    if (!$found) {
+    if ($index !== false) {
+        // If the product is already in the cart, increase the quantity
+        $_SESSION['cart'][$index]['quantity'] += 1;
+    } else {
+        // If the product is not in the cart, add it as a new item
         $_SESSION['cart'][] = array(
-            'id' => $product_id,
-            'name' => $product_name,
-            'price' => $product_price,
-            'image_url' => $product_image
+            'product_id' => $product_id,
+            'product_name' => $product_name,
+            'product_price' => $product_price,
+            'product_image' => $product_image,
+            'quantity' => 1
         );
     }
 
-    // Redirect back to the previous page
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    exit();
+    echo "Product added to cart.";
+    header("Location: ../cart.php");
 } else {
-    // Redirect back to the previous page if the required parameters are not set
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    exit();
+    echo "Invalid request.";
 }
 ?>
+

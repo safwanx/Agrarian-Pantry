@@ -338,3 +338,27 @@ footer {
 .cart-item select {
   width: 50px;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.quantity-select {
+  width: 50px;
+}
+
+.total-section {
+  margin-top: 40px;
+  text-align: center;
+}
