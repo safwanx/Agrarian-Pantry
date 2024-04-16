@@ -9,6 +9,11 @@ if (!isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 }
 
+// Initialize the cart if it is not set
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+
 if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST['product_price']) && isset($_POST['product_image'])) {
     $product_id = $_POST['product_id'];
     $product_name = $_POST['product_name'];
@@ -38,4 +43,3 @@ if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST
     echo "Invalid request.";
 }
 ?>
-
