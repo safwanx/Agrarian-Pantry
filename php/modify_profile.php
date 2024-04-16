@@ -11,12 +11,49 @@ if (!isset($_SESSION['user_id'])) {
 
 require 'database.php';
 
-$user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM users WHERE id = $user_id";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+?>
 
-// form for profile modification
-include '../modify_profile.html';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Modify Profile</title>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section class="modify-class">
+            <div class="modify-container">
+                <form method="post" action="">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="<?php echo $row['name']; ?>" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required><br><br>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" value="<?php echo $row['phone']; ?>" required><br><br>
+                    <label for="text">Type</label>
+                    <select name="type" id="type">
+                        <option value="Seller" <?php echo ($row['type'] == 'Seller') ? 'selected' : ''; ?>>Seller</option>
+                        <option value="Customer" <?php echo ($row['type'] == 'Customer') ? 'selected' : ''; ?>>Customer</option>
+                    </select><br><br>
+                    <button type="submit" name="modify-profile">Change Profile</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/footer.js"></script>
+    <script src="./scripts/account.js"></script>
+</body>
+</html>
 
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['modify-profile'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -25,10 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['modify-profile'])) {
 
     $stmt = $conn->prepare("UPDATE users SET name = ?, email = ?, phone = ?, type = ? WHERE id = $user_id");
     $stmt->bind_param("ssss", $name, $email, $phone, $type);
-
     if ($stmt->execute()) {
         echo "Profile modified successfully";
-
         header("Location: ../account.html");
         session_unset();
         exit();
@@ -37,6 +72,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['modify-profile'])) {
     }
     $stmt->close();
 }
-
 $conn->close();
 ?>
