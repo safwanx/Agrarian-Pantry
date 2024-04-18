@@ -38,16 +38,28 @@ if (!empty($_SESSION['cart'])) {
 
         // Commit the transaction
         $conn->commit();
-
-        // Display the thank you message and order summary
-        echo "<h1>Thank you for your order!</h1>";
-        echo "<h2>Order Summary:</h2>";
-        echo "<ul>";
-        foreach ($_SESSION['cart'] as $item) {
-            echo "<li>" . $item['product_name'] . " - $" . $item['product_price'] * $item['quantity'] . "</li>";
-        }
-        echo "</ul>";
-        echo "<button><a href='../products.html' class='btn'>Continue Shopping</a><button>";
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="refresh" content="5;url=../index.html">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="../styles.css">
+            <title>Order Placed</title>
+        </head>
+        <body>
+        <div id="header"></div>
+        <h1>Order Placed Successfully</h1>
+        <p>Your order has been placed successfully. Thank you for shopping with us!</p>
+        <p>You will be redirected to the home page in 5 seconds.</p>
+        <div id="footer"></div>
+        <script src="scripts/header.js"></script>
+        <script src="scripts/footer.js"></script>
+        </body>
+        </html>
+        <?php
+        header("refresh:5;url=../index.html");
         // Clear the cart
         unset($_SESSION['cart']);
     } catch (Exception $e) {
