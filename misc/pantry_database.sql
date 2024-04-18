@@ -36,6 +36,14 @@ CREATE TABLE orders (
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
+CREATE TABLE seller_order(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    seller_id INT NOT NULL,
+    order_id INT NOT NULL,
+    FOREIGN KEY (seller_id) REFERENCES users(id),
+    FOREIGN KEY (order_id) REFERENCES orders(orders_id)
+);
+
 CREATE TABLE locations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,

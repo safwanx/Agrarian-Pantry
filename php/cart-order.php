@@ -34,6 +34,13 @@ if (!empty($_SESSION['cart'])) {
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("iiii", $user_id, $seller_id, $product_id, $total_price);
             $stmt->execute();
+
+            // Get the ID of the last inserted order
+            $last_insert_id = $conn->insert_id;
+            $sql = "INSERT INTO seller_orders (seller_id, order_id) VALUES (?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ii", $seller_id, $last_insert_id);
+            $stmt->execute();
         }
 
         // Commit the transaction
@@ -43,7 +50,6 @@ if (!empty($_SESSION['cart'])) {
         <html lang="en">
         <head>
             <meta charset="UTF-8">
-            <meta http-equiv="refresh" content="5;url=../index.html">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="../styles.css">
             <title>Order Placed</title>
