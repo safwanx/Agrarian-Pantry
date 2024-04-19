@@ -29,6 +29,7 @@ CREATE TABLE orders (
     seller_id INT NOT NULL,
     product_id INT NOT NULL,
     total_price DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL,
     status ENUM('pending', 'completed', 'cancelled') NOT NULL DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),

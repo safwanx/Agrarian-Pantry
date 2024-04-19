@@ -30,14 +30,14 @@ if (!empty($_SESSION['cart'])) {
             $total_price = $quantity * $price;
 
             // Insert the order
-            $sql = "INSERT INTO orders (user_id, seller_id, product_id, total_price) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO orders (user_id, seller_id, product_id, total_price, quantity) VALUES (?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("iiii", $user_id, $seller_id, $product_id, $total_price);
+            $stmt->bind_param("iiiii", $user_id, $seller_id, $product_id, $total_price, $quantity);
             $stmt->execute();
 
             // Get the ID of the last inserted order
             $last_insert_id = $conn->insert_id;
-            $sql = "INSERT INTO seller_orders (seller_id, order_id) VALUES (?, ?)";
+            $sql = "INSERT INTO seller_order (seller_id, order_id) VALUES (?, ?)";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ii", $seller_id, $last_insert_id);
             $stmt->execute();
@@ -55,13 +55,13 @@ if (!empty($_SESSION['cart'])) {
             <title>Order Placed</title>
         </head>
         <body>
-        <div id="header"></div>
-        <h1>Order Placed Successfully</h1>
-        <p>Your order has been placed successfully. Thank you for shopping with us!</p>
-        <p>You will be redirected to the home page in 5 seconds.</p>
-        <div id="footer"></div>
-        <script src="scripts/header.js"></script>
-        <script src="scripts/footer.js"></script>
+            <div id="header"></div>
+            <h1>Order Placed Successfully</h1>
+            <p>Your order has been placed successfully. Thank you for shopping with us!</p>
+            <p>You will be redirected to the home page in 5 seconds.</p>
+            <div id="footer"></div>
+            <script src="scripts/header.js"></script>
+            <script src="scripts/footer.js"></script>
         </body>
         </html>
         <?php

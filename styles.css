@@ -256,7 +256,8 @@ footer {
 .sign-in-container,
 .sign-up-container,
 .modify-class, 
-.cart-container {
+.cart-container, 
+.view-order-container {
   max-width: 500px;
   margin: 20px auto;
   align-items: center;
@@ -272,7 +273,8 @@ footer {
 .sign-in-container:hover,
 .sign-up-container:hover,
 .modify-class:hover, 
-.cart-container:hover {
+.cart-container:hover, 
+.view-order-container:hover {
   transform: scale(1);
 }
 
