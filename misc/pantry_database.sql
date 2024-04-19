@@ -74,7 +74,7 @@ CREATE TABLE contact_form (
 --(DO NOT EXECUTE THE QUERIES BELOW. I REPEAT DO NOT WITHOUT CONSULT)--
 
 
--- Inserting data into the users table 
+-- Inserting data into greens table --
 INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url) VALUES
 ('greens', 1001, 'Lettuce', 'Crisp and fresh lettuce, ideal for salads or as a sandwich filler.', 7.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FLettuce.png?alt=media&token=00116c9d-e623-406d-a361-0195d2821c2d'),
 ('greens', 1001, 'Mint', 'Fresh mint, a flavorful herb that adds a vibrant touch to dishes.', 5.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FMint.png?alt=media&token=d212f383-4715-4d5e-961f-2f4afa305fa7'),
@@ -88,3 +88,35 @@ INSERT INTO products (product_type, seller_id, name, description, price, quantit
 ('greens', 1001, 'Corn', 'Fresh and sweet corn, ideal for boiling, grilling.', 3.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCorn.jpg?alt=media&token=d0f77eb4-5ad5-479f-9890-3197787feb03'),
 ('greens', 1001, 'Apples', 'Crisp and juicy apples, a classic and healthy snack.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fapples1.jpg?alt=media&token=a4824d4d-a644-492e-8d4c-fc195d7cae6b'),
 ('greens', 1001, 'Mangoes', 'Sweet and tropical mangoes, a delicious and refreshing treat.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fmangoes.jpg?alt=media&token=f1d731b6-a26c-4755-a520-a997e3759790');
+
+
+-- Inserting into baked table --
+INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url)
+VALUES
+('baked', 2, 'Croissant', 'Buttery and flaky croissant, a classic pastry for breakfast or anytime.', 8.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2Fcroissant%201.jpg?alt=media&token=0e7911e1-3dbb-4ccf-bdd7-db64d49a8a1b'),
+('baked', 2, 'Sourdough Bread', 'Artisanal sourdough bread with a chewy crust and tangy flavor.', 25.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2FSourdough%20Bread.jpg?alt=media&token=71aa00e3-5b1e-4de6-afba-55184ff8cd6f'),
+('baked', 2, 'Rye Bread', 'Dense and hearty rye bread, great for sandwiches or toasting.', 30.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2Frye%20bread.jpg?alt=media&token=982a5ef9-8767-45c2-865d-7bc46ef3b91b'),
+('baked', 2, 'Donut', 'Sweet and indulgent donut, a delightful treat for dessert or breakfast.', 5.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2FDonut.jpg?alt=media&token=61e66a4c-43d6-4c38-8b04-d982d231cae7'),
+('baked', 2, 'Cookies', 'Delicious assorted cookies, perfect for satisfying your sweet cravings.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2Fcookies.jpg?alt=media&token=903248e3-4a11-4547-aba3-48020af197b1'),
+('baked', 2, 'Chocolate Cake', 'Rich and decadent chocolate cake, a perfect dessert for any occasion.', 40.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2FChocolate%20Cake.jpg?alt=media&token=de3ae0cf-f502-42da-8b37-b93be9b1038e');
+
+
+--  inserting into dairy table --
+INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url)
+VALUES
+('dairy', 3, 'Feta Cheese', 'Tangy and crumbly feta cheese, great for salads and Mediterranean dishes.', 25.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Ffeta%20cheese.jpg?alt=media&token=ddc64d28-bc4d-4cdc-b349-8f5f08625487'),
+('dairy', 3, 'Yellow Cheese', 'Creamy and mild yellow cheese, perfect for sandwiches or snacks.', 20.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2FYellow%20Cheese.png?alt=media&token=37990863-79a9-4a16-ae17-0d4942647dde'),
+('dairy', 3, 'Butter', 'Creamy and rich butter, a staple for cooking and baking.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2FButter.jpeg?alt=media&token=5d2636d7-d2a8-4b2e-b0ed-1f545b1f957d'),
+('dairy', 3, 'Eggs', 'Farm-fresh eggs, a versatile and essential kitchen staple.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Feggs.jpg?alt=media&token=a8221d8e-aa95-437f-9054-840c90306f54'),
+('dairy', 3, 'Milk', 'Fresh and creamy milk, straight from the farm to your table.', 8.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Fmilk.jpg?alt=media&token=b48b3b77-df71-47c9-be7b-ebc3e73f9e61'),
+('dairy', 3, 'Yogurt', 'Smooth and tangy yogurt, a nutritious and delicious addition to your diet.', 12.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Fyoghurt.jpg?alt=media&token=b7397fc9-9d98-4c02-8ec4-d73f90868d08');
+
+-- Inserting into meat table --
+INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url)
+VALUES
+('meat', 4, 'Lamb', 'Tender and flavorful lamb, perfect for roasting or grilling.', 40.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Flamb.jpg?alt=media&token=64ba63d0-cb35-4509-94bf-70ffeb062bfa'),
+('meat', 4, 'Beef', 'High-quality beef, perfect for roasts, steaks, or stews.', 50.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Fbeef.jpg?alt=media&token=8cc1592f-7d8e-4fc6-b72c-39be89abffe9'),
+('meat', 4, 'Beef Mince', 'Finely ground beef mince, versatile for a variety of dishes.', 25.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Fbeef-mince.jpg?alt=media&token=251cf3c0-27a1-4bb2-96b9-6f70eb51d359'),
+('meat', 4, 'Chicken', 'Fresh chicken, versatile for a wide range of delicious recipes.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Fchicken.jpg?alt=media&token=5f543ea3-92eb-4dca-9745-04e562f16b87'),
+('meat', 4, 'Short Ribs', 'Tender and succulent short ribs, perfect for slow cooking or grilling.', 80.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Fshort%20ribs.jpg?alt=media&token=cbc1d15e-cf4c-4304-8cbb-a51b2ae5ce4e'),
+('meat', 4, 'Tomahawk', 'A large, flavorful Tomahawk steak, ideal for grilling or roasting.', 120.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Ftomahawk.png?alt=media&token=f56fd14c-2792-4603-b1f6-a32f97d2c5cb');
