@@ -72,9 +72,9 @@ CREATE TABLE contact_form (
 
 --Use the above script to make the database in ur local machine. The below part is only when needed, contact before executing them--
 
---(DO NOT EXECUTE THE QUERIES BELOW. I REPEAT DO NOT WITHOUT CONSULT)--
+--(DO NOT EXECUTE THE QUERIES BELOW. I REPEAT DO NOT WITHOUT CONSULTING)--
 
--- FIRST MAKE A CUSTOMER ACCOUNT USING THE WEBSITE, THEN MAKE A SELLER ACCOUNT USING THE WEBSITE, THEN EXECUTE THE QUERIES BELOW --
+-- FIRST MAKE A CUSTOMER ACCOUNT USING THE WEBSITE, THEN MAKE FOUR SELLER ACCOUNTS USING THE WEBSITE, THEN EXECUTE THE QUERIES BELOW --
 
 -- Inserting into baked table --
 INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url)

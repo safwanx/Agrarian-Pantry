@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../account.html");
+    header("Location: ../html/account.html");
     exit;
 }
 
@@ -51,7 +51,7 @@ if (!empty($_SESSION['cart'])) {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="../styles.css">
+            <link rel="stylesheet" href="../html/styles.css">
             <title>Order Placed</title>
         </head>
         <body>
@@ -60,12 +60,12 @@ if (!empty($_SESSION['cart'])) {
             <p>Your order has been placed successfully. Thank you for shopping with us!</p>
             <p>You will be redirected to the home page in 5 seconds.</p>
             <div id="footer"></div>
-            <script src="scripts/header.js"></script>
-            <script src="scripts/footer.js"></script>
+            <script src="../scripts/header.js"></script>
+            <script src="../scripts/footer.js"></script>
         </body>
         </html>
         <?php
-        header("refresh:5;url=../index.html");
+        header("refresh:5;url=../html/index.html");
         // Clear the cart
         unset($_SESSION['cart']);
     } catch (Exception $e) {

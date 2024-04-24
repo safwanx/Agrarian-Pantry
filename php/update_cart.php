@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: account.html");
+    header("Location: ../html/account.html");
     exit;
 }
 
@@ -23,11 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Redirect back to the cart page
     $_SESSION['message'] = "Cart updated successfully.";
-    header("Location: ../cart.php");
+    header("Location: ../html/cart.php");
     exit;
 } else {
     // If the request method is not POST, redirect to the homepage
-    header("Location: ../index.php");
+    header("Location: ../html/index.html");
     exit;
 }
 ?>

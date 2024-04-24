@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: account.html");
+    header("Location: ../html/account.html");
     exit;
 } else {
     $user_id = $_SESSION['user_id'];
@@ -21,7 +21,7 @@ $row = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../html/styles.css">
     <title>Modify Account</title>
 </head>
 <body>
@@ -42,9 +42,9 @@ $row = $result->fetch_assoc();
         </section>
     </main>
     <div id="footer"></div>
-    <script src="./scripts/header.js"></script>
-    <script src="./scripts/footer.js"></script>
-    <script src="./scripts/account.js"></script>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
+    <script src="../scripts/account.js"></script>
 </body>
 </html>
 
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['modify-password'])) {
             $stmt->bind_param("s", $hashed_new_password);
             if ($stmt->execute()) {
                 echo "Password changed successfully";
-                header("Location: ../account.html");
+                header("Location: ../html/account.html");
                 session_unset();
                 exit();
             } else {

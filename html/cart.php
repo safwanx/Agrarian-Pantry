@@ -34,7 +34,7 @@ $total_price = 0;
                     <td><?php echo $item['product_name']; ?></td>
                     <td>$<?php echo $item['product_price']; ?></td>
                     <td>
-                        <form action="./php/update_cart.php" method="post">
+                        <form action="../php/update_cart.php" method="post">
                             <input type="hidden" name="product_id" value="<?php echo $item['product_id']; ?>">
                             <select name="quantity" class="quantity-select" onchange="this.form.submit()">
                                 <?php for ($i = 1; $i <= 10; $i++): ?>
@@ -44,7 +44,7 @@ $total_price = 0;
                         </form>
                     </td>
                     <td>$<?php echo $item['product_price'] * $item['quantity']; ?></td>
-                    <td><a href="./php/remove_from_cart.php?index=<?php echo array_search($item, $_SESSION['cart']); ?>">Remove</a></td>
+                    <td><a href="../php/remove_from_cart.php?index=<?php echo array_search($item, $_SESSION['cart']); ?>">Remove</a></td>
                 </tr>
                 <?php $total_items += $item['quantity']; $total_price += $item['product_price'] * $item['quantity']; endforeach; ?>
             </table>
@@ -53,12 +53,12 @@ $total_price = 0;
                 Total Price: $<?php echo $total_price; ?>
             </div>
             <div class="place-order-button">
-                <a href="./php/cart-order.php" class="btn">Place Order</a>
+                <a href="../php/cart-order.php" class="btn">Place Order</a>
             </div>
         <?php } ?>
     </div>
     <div id="footer"></div>
-    <script src="./scripts/header.js"></script>
-    <script src="./scripts/footer.js"></script>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
 </body>
 </html>

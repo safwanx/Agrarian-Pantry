@@ -2,9 +2,9 @@
 error_reporting(E_ALL); 
 ini_set('display_errors', 1); 
 
-require './php/database.php'; 
+require '../php/database.php'; 
 
-$sql = "SELECT * FROM products WHERE product_type = 'meat'"; 
+$sql = "SELECT * FROM products WHERE product_type = 'greens'"; 
 $result = $conn->query($sql); 
 ?> 
 
@@ -13,14 +13,14 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Meat</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Greens</title>
 </head>
 
 <body>
     <div id="header"></div>
     <main>
-        <h1>Meat</h1>
+        <h1>Greens</h1>
         <div class="product-display-container">
             <?php if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) { ?>
@@ -29,7 +29,7 @@ $result = $conn->query($sql);
                         <h2><?php echo $row['name']; ?></h2>
                         <p><?php echo $row['description']; ?></p>
                         <p>Price: $<?php echo $row['price']; ?></p>
-                        <form action="./php/add_to_cart.php" method="post">
+                        <form action="../php/add_to_cart.php" method="post">
                             <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
                             <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
                             <input type="hidden" name="product_price" value="<?php echo $row['price']; ?>">
@@ -46,8 +46,8 @@ $result = $conn->query($sql);
         </div>
     </main>
     <div id="footer"></div>
-    <script src="./scripts/header.js"></script>
-    <script src="./scripts/footer.js"></script>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>
 </body>
 </html>
 <?php $conn->close(); 

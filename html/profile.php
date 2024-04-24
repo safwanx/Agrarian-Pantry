@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 }
 
-require './php/database.php';
+require '../php/database.php';
 
 $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM users WHERE id = $user_id";
@@ -71,13 +71,14 @@ if (isset($_POST['logout'])) {
                 if ($user_type === 'Customer') {
 
                 } elseif ($user_type === 'Seller') {
+                    
                 };
             ?>
         </section>
     </main>
 
     <div id="footer"></div>
-    <script src="./scripts/header.js"></script>
-    <script src="./scripts/footer.js"></script>    
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/footer.js"></script>    
 </body>
 </html>

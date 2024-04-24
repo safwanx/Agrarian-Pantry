@@ -20,16 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-in'])) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['user_name'] = $row['name'];
             $_SESSION['user_email'] = $row['email'];
-            header("Location: ../index.html");
+            header("Location: ../html/index.html");
             exit();
         } else {
             // Password is incorrect
-            header("Location: ../account.html?error=incorect-password");
+            header("Location: ../html/account.html?error=incorect-password");
             exit();
         }
     } else {
         // User not found
-        header("Location: ../account.html?error=user-not-found"); 
+        header("Location: ../html/account.html?error=user-not-found"); 
         exit();
     }
 

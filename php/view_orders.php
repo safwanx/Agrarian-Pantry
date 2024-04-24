@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../account.html");
+    header("Location: ../html/account.html");
     exit;
 }
 $user_id = $_SESSION['user_id'];
@@ -31,7 +31,7 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="../styles.css">
     <title>View Orders</title>
 </head>
-<style><?php include "../styles.css" ?></style>
+<style><?php include "../html/styles.css" ?></style>
 <body>
     <div id="header"></div>
     <div class="view-order-container">
@@ -63,7 +63,7 @@ $result = $stmt->get_result();
             }
             ?>
         </table>
-        <button><a href="../profile.php">Back to profile</a></button>
+        <button><a href="../html/profile.php">Back to profile</a></button>
     </div>
     <div id="footer"></div>
 

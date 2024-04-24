@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert data into database
     if ($stmt->execute()) {
-        header("refresh:3;url=../index.html");
+        header("refresh:3;url=../html/index.html");
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Contact Us</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../html/style.css">
 </head>
 
 <body>

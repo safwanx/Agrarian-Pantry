@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../account.html");
+    header("Location: ./html/account.html");
     exit;
 }
 
@@ -39,9 +39,11 @@ if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST
     }
 
     echo "Product added to cart.";
-    header("Location: ../cart.php");
+    header("Location: ./html/cart.php");
+    exit();
 } else {
     echo "Invalid request.";
-    header("Location: ../index.php");
+    header("Location: ./html/index.php");
+    exit();
 }
 ?>

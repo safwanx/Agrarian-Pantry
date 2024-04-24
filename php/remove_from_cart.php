@@ -5,5 +5,5 @@ $index = $_GET['index'];
 
 unset($_SESSION['cart'][$index]);
 
-header('Location: ../cart.php');
+header('Location: ../html/cart.php');
 ?>

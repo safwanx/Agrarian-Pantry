@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
 
     if ($stmt->execute()) {
         // User created successfully, redirect to sign in page
-        header("Location: ../account.html");
+        header("Location: ../html/account.html");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
