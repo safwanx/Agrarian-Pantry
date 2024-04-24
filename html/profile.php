@@ -21,6 +21,7 @@ if ($result->num_rows > 0) {
     $user_email = $row['email'];
     $user_phone = $row['phone'];
     $user_type = $row['type'];
+    $user_address = $row['address'];
 }
 
 $conn->close();
@@ -51,6 +52,7 @@ if (isset($_POST['logout'])) {
                 <p>Email: <?php echo $user_email; ?></p>
                 <p>Phone: <?php echo $user_phone; ?></p>
                 <p>Role: <?php echo $user_type; ?></p>
+                <p>Address: <?php echo $user_address; ?></p>
                 <form method="post">
                     <button type="submit" name="logout">Logout</button>
                 </form>
