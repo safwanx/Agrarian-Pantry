@@ -55,8 +55,8 @@ CREATE TABLE locations (
 );
 
 CREATE TABLE order_history (
-    order_id INT AUTO_INCREMENT PRIMARY KEY,
-    order_history_id INT NOT NULL,
+    order_history_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
     status ENUM('pending', 'completed', 'cancelled') NOT NULL DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (order_id) REFERENCES orders(orders_id)
@@ -87,16 +87,20 @@ VALUES
 ('baked', 2, 'Cookies', 'Delicious assorted cookies, perfect for satisfying your sweet cravings.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2Fcookies.jpg?alt=media&token=903248e3-4a11-4547-aba3-48020af197b1'),
 ('baked', 2, 'Chocolate Cake', 'Rich and decadent chocolate cake, a perfect dessert for any occasion.', 40.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2Fbakery%2FChocolate%20Cake.jpg?alt=media&token=de3ae0cf-f502-42da-8b37-b93be9b1038e');
 
-
---  inserting into dairy table --
-INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url)
-VALUES
-('dairy', 5, 'Feta Cheese', 'Tangy and crumbly feta cheese, great for salads and Mediterranean dishes.', 25.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Ffeta%20cheese.jpg?alt=media&token=ddc64d28-bc4d-4cdc-b349-8f5f08625487'),
-('dairy', 5, 'Yellow Cheese', 'Creamy and mild yellow cheese, perfect for sandwiches or snacks.', 20.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2FYellow%20Cheese.png?alt=media&token=37990863-79a9-4a16-ae17-0d4942647dde'),
-('dairy', 5, 'Butter', 'Creamy and rich butter, a staple for cooking and baking.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2FButter.jpeg?alt=media&token=5d2636d7-d2a8-4b2e-b0ed-1f545b1f957d'),
-('dairy', 5, 'Eggs', 'Farm-fresh eggs, a versatile and essential kitchen staple.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Feggs.jpg?alt=media&token=a8221d8e-aa95-437f-9054-840c90306f54'),
-('dairy', 5, 'Milk', 'Fresh and creamy milk, straight from the farm to your table.', 8.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Fmilk.jpg?alt=media&token=b48b3b77-df71-47c9-be7b-ebc3e73f9e61'),
-('dairy', 5, 'Yogurt', 'Smooth and tangy yogurt, a nutritious and delicious addition to your diet.', 12.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Fyoghurt.jpg?alt=media&token=b7397fc9-9d98-4c02-8ec4-d73f90868d08');
+-- Inserting data into greens table --
+INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url) VALUES
+('greens', 3, 'Lettuce', 'Crisp and fresh lettuce, ideal for salads or as a sandwich filler.', 7.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FLettuce.png?alt=media&token=00116c9d-e623-406d-a361-0195d2821c2d'),
+('greens', 3, 'Mint', 'Fresh mint, a flavorful herb that adds a vibrant touch to dishes.', 5.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FMint.jpg?alt=media&token=d7034236-a4ee-4ecc-b0bb-63bc87f6d778'),
+('greens', 3, 'Cucumber', 'Crisp and refreshing cucumber, a great addition to salads or as a snack.', 6.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCucumber.jpg?alt=media&token=d0480014-2257-4ad7-8f5d-5c7b87cf29da'),
+('greens', 3, 'Kiwi', 'Vibrant and nutritious kiwi fruit, a flavorful addition to your diet.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fkiwi.jpg?alt=media&token=8c823cb4-0670-4226-8f37-9895970fe177'),
+('greens', 3, 'Strawberry', 'Fresh and juicy strawberries, a delightful and healthy snack.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FStrawberries.jpg?alt=media&token=981121a9-f809-4942-b741-fd8fe1733e74'),
+('greens', 3, 'Papaya', 'Ripe and tropical papaya, rich in vitamins and antioxidants.', 12.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fpapaya.jpg?alt=media&token=39bab6f1-eb15-4c38-a51e-dc730c816809'),
+('greens', 3, 'Pomegranate', 'Sweet and tangy pomegranate, a nutritious and refreshing fruit.', 18.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fpomegranate.jpg?alt=media&token=fcc19958-cf04-409d-a226-366e29ec1df7'),
+('greens', 3, 'Potato', 'Versatile potatoes, suitable for various culinary applications.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fpotato.jpg?alt=media&token=c3c10281-481b-4330-b2e8-702afad4915e'),
+('greens', 3, 'Carrot', 'Sweet and crunchy carrots, great for snacking or cooking.', 6.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCarrot.jpg?alt=media&token=5850696a-2ad4-4061-85d1-27a7ba96f1d0'),
+('greens', 3, 'Corn', 'Fresh and sweet corn, ideal for boiling, grilling.', 3.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCorn.jpg?alt=media&token=d0f77eb4-5ad5-479f-9890-3197787feb03'),
+('greens', 3, 'Apples', 'Crisp and juicy apples, a classic and healthy snack.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fapples1.jpg?alt=media&token=a4824d4d-a644-492e-8d4c-fc195d7cae6b'),
+('greens', 3, 'Mangoes', 'Sweet and tropical mangoes, a delicious and refreshing treat.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FMango%201.jpeg?alt=media&token=48add76a-fdbb-49ed-97b9-2c0ae260e663');
 
 -- Inserting into meat table --
 INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url)
@@ -108,17 +112,12 @@ VALUES
 ('meat', 4, 'Short Ribs', 'Tender and succulent short ribs, perfect for slow cooking or grilling.', 80.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Fshort%20ribs.jpg?alt=media&token=cbc1d15e-cf4c-4304-8cbb-a51b2ae5ce4e'),
 ('meat', 4, 'Tomahawk', 'A large, flavorful Tomahawk steak, ideal for grilling or roasting.', 120.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FMeat%2Ftomahawk.png?alt=media&token=f56fd14c-2792-4603-b1f6-a32f97d2c5cb');
 
--- Inserting data into greens table --
-INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url) VALUES
-('greens', 3, 'Lettuce', 'Crisp and fresh lettuce, ideal for salads or as a sandwich filler.', 7.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FLettuce.png?alt=media&token=00116c9d-e623-406d-a361-0195d2821c2d'),
-('greens', 3, 'Mint', 'Fresh mint, a flavorful herb that adds a vibrant touch to dishes.', 5.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FMint.png?alt=media&token=d212f383-4715-4d5e-961f-2f4afa305fa7'),
-('greens', 3, 'Cucumber', 'Crisp and refreshing cucumber, a great addition to salads or as a snack.', 6.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCucumber.jpg?alt=media&token=53439e26-f4f5-4879-beb3-f0b711bf0b69'),
-('greens', 3, 'Kiwi', 'Vibrant and nutritious kiwi fruit, a flavorful addition to your diet.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fkiwi.jpg?alt=media&token=8c823cb4-0670-4226-8f37-9895970fe177'),
-('greens', 3, 'Strawberry', 'Fresh and juicy strawberries, a delightful and healthy snack.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FStrawberries.jpg?alt=media&token=981121a9-f809-4942-b741-fd8fe1733e74'),
-('greens', 3, 'Papaya', 'Ripe and tropical papaya, rich in vitamins and antioxidants.', 12.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fpapaya.jpg?alt=media&token=39bab6f1-eb15-4c38-a51e-dc730c816809'),
-('greens', 3, 'Pomegranate', 'Sweet and tangy pomegranate, a nutritious and refreshing fruit.', 18.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fpomegranate.jpg?alt=media&token=fcc19958-cf04-409d-a226-366e29ec1df7'),
-('greens', 3, 'Potato', 'Versatile potatoes, suitable for various culinary applications.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fpotato.jpg?alt=media&token=c3c10281-481b-4330-b2e8-702afad4915e'),
-('greens', 3, 'Carrot', 'Sweet and crunchy carrots, great for snacking or cooking.', 6.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCarrot.jpg?alt=media&token=5850696a-2ad4-4061-85d1-27a7ba96f1d0'),
-('greens', 3, 'Corn', 'Fresh and sweet corn, ideal for boiling, grilling.', 3.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2FCorn.jpg?alt=media&token=d0f77eb4-5ad5-479f-9890-3197787feb03'),
-('greens', 3, 'Apples', 'Crisp and juicy apples, a classic and healthy snack.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fapples1.jpg?alt=media&token=a4824d4d-a644-492e-8d4c-fc195d7cae6b'),
-('greens', 3, 'Mangoes', 'Sweet and tropical mangoes, a delicious and refreshing treat.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FGreens%2Fmangoes.jpg?alt=media&token=f1d731b6-a26c-4755-a520-a997e3759790');
+--  inserting into dairy table --
+INSERT INTO products (product_type, seller_id, name, description, price, quantity, image_url)
+VALUES
+('dairy', 5, 'Feta Cheese', 'Tangy and crumbly feta cheese, great for salads and Mediterranean dishes.', 25.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Ffeta%20cheese.jpg?alt=media&token=ddc64d28-bc4d-4cdc-b349-8f5f08625487'),
+('dairy', 5, 'Yellow Cheese', 'Creamy and mild yellow cheese, perfect for sandwiches or snacks.', 20.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2FYellow%20Cheese.png?alt=media&token=37990863-79a9-4a16-ae17-0d4942647dde'),
+('dairy', 5, 'Butter', 'Creamy and rich butter, a staple for cooking and baking.', 15.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2FButter.jpeg?alt=media&token=5d2636d7-d2a8-4b2e-b0ed-1f545b1f957d'),
+('dairy', 5, 'Eggs', 'Farm-fresh eggs, a versatile and essential kitchen staple.', 10.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Feggs.jpg?alt=media&token=a8221d8e-aa95-437f-9054-840c90306f54'),
+('dairy', 5, 'Milk', 'Fresh and creamy milk, straight from the farm to your table.', 8.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Fmilk.jpg?alt=media&token=b48b3b77-df71-47c9-be7b-ebc3e73f9e61'),
+('dairy', 5, 'Yogurt', 'Smooth and tangy yogurt, a nutritious and delicious addition to your diet.', 12.00, 100, 'https://firebasestorage.googleapis.com/v0/b/agrarian-pantry.appspot.com/o/agrarian-images%2FDairy%2Fyoghurt.jpg?alt=media&token=b7397fc9-9d98-4c02-8ec4-d73f90868d08');

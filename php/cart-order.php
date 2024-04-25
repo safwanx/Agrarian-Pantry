@@ -41,6 +41,13 @@ if (!empty($_SESSION['cart'])) {
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ii", $seller_id, $last_insert_id);
             $stmt->execute();
+
+            // Insert into order history
+            $sql2 = "INSERT INTO order_history (order_id, status) VALUES (?, ?)";
+            $stmt2 = $conn->prepare($sql2);
+            $status = 'pending'; // Assuming the status should be 'pending' for new orders
+            $stmt2->bind_param("is", $last_insert_id, $status);
+            $stmt2->execute();
         }
 
         // Commit the transaction
