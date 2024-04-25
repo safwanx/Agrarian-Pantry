@@ -34,10 +34,9 @@ if ($result->num_rows > 0) {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="../styles.css">
+            <link rel="stylesheet" href="styles.css">
             <title>Order History</title>
         </head>
-        <style><?php include "styles.css"?></style>
         <body>
             <div id="header"></div>
             <main>
@@ -56,8 +55,8 @@ if ($result->num_rows > 0) {
                 </div>
             </main>
             <div id="footer"></div>
-            <script src="../scripts/header.js"></script>
-            <script src="../scripts/footer.js"></script>
+            <!-- <script src="../scripts/header.js"></script>
+            <script src="../scripts/footer.js"></script> -->
         </body>
         </html>
         <?php

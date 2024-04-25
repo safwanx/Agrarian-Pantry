@@ -259,7 +259,7 @@ footer {
 .cart-container, 
 .view-order-container,
 .order-history-container,
-.order-history-item {
+.add-product-container {
   max-width: 500px;
   margin: 20px auto;
   align-items: center;
@@ -277,7 +277,7 @@ footer {
 .modify-class:hover, 
 .cart-container:hover, 
 .view-order-container:hover,
-.order-history-container:hover {
+.add-product-container:hover {
   transform: scale(1);
 }
 
@@ -366,4 +366,33 @@ th {
 .total-section {
   margin-top: 40px;
   text-align: center;
+}
+
+/*Add product style*/
+form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

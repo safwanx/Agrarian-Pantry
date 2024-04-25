@@ -62,13 +62,11 @@ if (!empty($_SESSION['cart'])) {
             <title>Order Placed</title>
         </head>
         <body>
-            <div id="header"></div>
+            <header><?php include('../html/header.html'); ?></header>
             <h1>Order Placed Successfully</h1>
             <p>Your order has been placed successfully. Thank you for shopping with us!</p>
             <p>You will be redirected to the home page in 5 seconds.</p>
-            <div id="footer"></div>
-            <script src="../scripts/header.js"></script>
-            <script src="../scripts/footer.js"></script>
+            <footer><?php include('../html/footer.html'); ?></footer>
         </body>
         </html>
         <?php

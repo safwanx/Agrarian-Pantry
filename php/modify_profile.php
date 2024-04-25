@@ -25,7 +25,7 @@ $row = $result->fetch_assoc();
     <title>Modify Profile</title>
 </head>
 <body>
-    <div id="header"></div>
+    <header><?php include('../html/header.html'); ?></header>
     <main>
         <section class="modify-class">
             <div class="modify-container">
@@ -46,9 +46,7 @@ $row = $result->fetch_assoc();
             </div>
         </section>
     </main>
-    <div id="footer"></div>
-    <script src="../scripts/header.js"></script>
-    <script src="../scripts/footer.js"></script>
+    <footer><?php include('../html/footer.html'); ?></footer>
     <script src="../scripts/account.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ $result = $stmt->get_result();
 </head>
 <style><?php include "../html/styles.css" ?></style>
 <body>
-    <div id="header"></div>
+    <header><?php include "../html/header.html" ?></header>
     <div class="view-order-container">
         <h1>View Orders</h1>
         <table>
@@ -65,9 +65,6 @@ $result = $stmt->get_result();
         </table>
         <button><a href="../html/profile.php">Back to profile</a></button>
     </div>
-    <div id="footer"></div>
-
-    <script src="../scripts/header.js"></script>
-    <script src="../scripts/footer.js"></script>
+    <footer><?php include('../html/footer.html'); ?></footer>
 </body>
 </html>
