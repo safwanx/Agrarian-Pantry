@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: account.html');
+    exit();
+}
+
 $total_items = 0;
 $total_price = 0;
 ?>
