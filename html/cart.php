@@ -15,6 +15,7 @@ $total_price = 0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Cart</title>
 </head>
@@ -32,7 +33,6 @@ $total_price = 0;
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Total Price</th>
-                    <th>Action</th>
                 </tr>
                 <?php foreach ($_SESSION['cart'] as $item): ?>
                 <tr>
@@ -50,7 +50,6 @@ $total_price = 0;
                         </form>
                     </td>
                     <td>$<?php echo $item['product_price'] * $item['quantity']; ?></td>
-                    <td><a href="../php/remove_from_cart.php?index=<?php echo array_search($item, $_SESSION['cart']); ?>">Remove</a></td>
                 </tr>
                 <?php $total_items += $item['quantity']; $total_price += $item['product_price'] * $item['quantity']; endforeach; ?>
             </table>
@@ -58,8 +57,13 @@ $total_price = 0;
                 Total Items: <?php echo $total_items; ?><br>
                 Total Price: $<?php echo $total_price; ?>
             </div>
-            <div class="place-order-button">
-                <a href="../php/cart-order.php" class="btn">Place Order</a>
+            <div class="place-order-button d-flex justify-content-center">
+                <button class="btn btn-danger me-2">
+                    <a href="../php/remove_from_cart.php?index=<?php echo array_search($item, $_SESSION['cart']); ?>" class="text-decoration-none text-white">Remove</a>
+                </button>
+                <button class="btn btn-primary">
+                    <a href="../php/cart-order.php" class="text-decoration-none text-white">Place Order</a>
+                </button>
             </div>
         <?php } ?>
     </div>
