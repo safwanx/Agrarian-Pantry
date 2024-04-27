@@ -43,7 +43,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
-    <style><?php include('../html/tailwind.css'); ?></style>
+    <style><?php include('../html/styles.css'); ?></style>
 </head>
 <body>
     <header><?php include('../html/header.html'); ?></header>

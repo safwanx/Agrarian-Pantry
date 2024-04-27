@@ -31,7 +31,7 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="../styles.css">
     <title>View Orders</title>
 </head>
-<style><?php include "../html/tailwind.css" ?></style>
+<style><?php include "../html/styles.css" ?></style>
 <body>
     <header><?php include "../html/header.html" ?></header>
     <div class="view-order-container">
