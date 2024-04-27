@@ -21,9 +21,10 @@ $row = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../html/styles.css">
+    <link rel="stylesheet" href="../html/tailwind.css">
     <title>Modify Profile</title>
 </head>
+<style><?php include "../html/tailwind.css" ?></style>
 <body>
     <header><?php include('../html/header.html'); ?></header>
     <main>

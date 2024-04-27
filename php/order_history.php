@@ -34,11 +34,12 @@ if ($result->num_rows > 0) {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="tailwind.css">
             <title>Order History</title>
         </head>
+        <style><?php include "../html/tailwind.css" ?></style>
         <body>
-            <div id="header"></div>
+            <header><?php include "../html/header.html" ?></header>
             <main>
                 <h1>Order History</h1>
                 <div class="order-history-container">
@@ -54,18 +55,17 @@ if ($result->num_rows > 0) {
                     </div>
                 </div>
             </main>
-            <div id="footer"></div>
-            <!-- <script src="../scripts/header.js"></script>
-            <script src="../scripts/footer.js"></script> -->
         </body>
         </html>
         <?php
     }
+    ?>
+    <!DOCTYPE html>
+    <footer><?php include "../html/footer.html" ?></footer>
+    <?php
 } else {
     echo "No order history found.";
 }
-
-// Close the database connection
 $stmt->close();
 $conn->close();
 ?>
