@@ -13,7 +13,7 @@ function showPosition(position) {
 }
 
 function reverseGeocode(latitude, longitude) {
-  const apiKey = "YOUR_GOOGLE_MAPS_API_KEY";
+  const apiKey = "AIzaSyD6-O4-Hl4_TGD0kaXOPwzerBy2rEkKVpM";
   const geocodingUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
 
   fetch(geocodingUrl)
