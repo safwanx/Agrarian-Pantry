@@ -6,23 +6,19 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: ../html/account.html");
     exit;
 }
+
 $user_id = $_SESSION['user_id'];
 
 // Connect to the database
 require 'database.php';
 
 // Get the orders for the seller with product names
-$sql = "SELECT o.orders_id, o.total_price, o.status, o.quantity, p.name
-        FROM orders o
-        JOIN seller_order so ON o.orders_id = so.order_id
-        JOIN products p ON o.product_id = p.product_id
-        WHERE so.seller_id = ?";
+$sql = "SELECT o.orders_id, o.total_price, o.status, o.quantity, p.name FROM orders o JOIN seller_order so ON o.orders_id = so.order_id JOIN products p ON o.product_id = p.product_id WHERE so.seller_id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,9 +39,9 @@ $result = $stmt->get_result();
                 <th>Total Price</th>
                 <th>Quantity</th>
                 <th>Status</th>
+                <th>Action</th>
             </tr>
-            <?php
-            while ($row = $result->fetch_assoc()) {
+            <?php while ($row = $result->fetch_assoc()) {
                 $order_id = $row['orders_id'];
                 $product_name = $row['name'];
                 $total_price = $row['total_price'];
@@ -57,11 +53,17 @@ $result = $stmt->get_result();
                     <td><?php echo $product_name; ?></td>
                     <td><?php echo $total_price; ?></td>
                     <td><?php echo $quantity; ?></td>
-                    <td><?php echo $status; ?></td>
+                    <td>
+                        <?php echo $status; ?>
+                        <?php if ($status !== 'completed') { ?>
+                            <form method="post" action="update_order_status.php">
+                                <input type="hidden" name="order_id" value="<?php echo $order_id; ?>">
+                                <td><input type="submit" name="complete_order" value="Complete Order"></td>
+                            </form>
+                        <?php } ?>
+                    </td>
                 </tr>
-                <?php
-            }
-            ?>
+            <?php } ?>
         </table>
         <button><a href="../html/profile.php">Back to profile</a></button>
     </div>

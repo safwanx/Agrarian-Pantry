@@ -39,6 +39,7 @@ if (isset($_POST['logout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Profile</title>
 </head>
@@ -54,33 +55,24 @@ if (isset($_POST['logout'])) {
                 <p>Role: <?php echo $user_type; ?></p>
                 <p>Address: <?php echo $user_address; ?></p>
                 <form method="post">
-                    <button type="submit" name="logout">Logout</button>
+                    <button type="submit" name="logout" class="btn btn-primary">Logout</button>
                 </form>
             </div>
             <div class="profile-div">
-            <?php 
+                <?php 
                     if ($user_type === 'Customer') {
                         include 'customer_profile.html';
-
                     } elseif ($user_type === 'Seller') {
                         include 'seller_profile.html';
-                    };
+                    }
                 ?>
             </div>
-
-            <!--Display order history/ manage products based on user role-->
-            <?php 
-                if ($user_type === 'Customer') {
-
-                } elseif ($user_type === 'Seller') {
-                    
-                };
-            ?>
         </section>
     </main>
 
     <div id="footer"></div>
     <script src="../scripts/header.js"></script>
-    <script src="../scripts/footer.js"></script>    
+    <script src="../scripts/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
