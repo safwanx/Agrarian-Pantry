@@ -1,33 +1,127 @@
-<header>
-  <nav class="navigation-bar" id="navigation-bar">
-    <a href="../html/index.html">
-      <img src="../images/logo.png" alt="Agrarian Pantry Logo" class="logo" />
-    </a>
-    <ul>
-      <li>
-        <a href="../html/index.html" class="active">Home</a>
-      </li>
-      <li>
-        <a href="../html/products.html">Products</a>
-        <!-- <div class="products-content">
-          <a href="products-greens.php">Greens</a>
-          <a href="products-meat.php">Meat</a>
-          <a href="products-dairy.php">Dairy</a>
-          <a href="products-baked.php">Baked Goods</a>
-      </div> -->
-      </li>
-      <li>
-        <a href="../html/contact.html">Contact Us</a>
-      </li>
-      <li>
-        <a href="../html/cart.php">Cart</a>
-      </li>
-      <li>
-        <a href="../html/profile.php">Profile</a>
-      </li>
-      <li>
-        <a href="../html/account.html" class="sign-in">Sign in</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation-bar" id="navigation-bar">
+        <a href="../html/index.html">
+          <img
+            src="../images/logo.png"
+            alt="Agrarian Pantry Logo"
+            class="logo"
+          />
+        </a>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()>
+            <a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="26"
+                viewBox="0 -960 960 960"
+                width="26"
+                fill="#307a70"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="../html/index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="../html/products.html">Products</a>
+            <!-- <div class="products-content">
+            <a href="products-greens.php">Greens</a>
+            <a href="products-meat.php">Meat</a>
+            <a href="products-dairy.php">Dairy</a>
+            <a href="products-baked.php">Baked Goods</a>
+        </div> -->
+          </li>
+          <li>
+            <a href="../html/contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="../html/cart.php"
+              ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="../html/profile.php"
+              ><i class="fa fa-user-circle" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="../html/account.html" class="sign-in">Sign in</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="hideOnMobile">
+            <a href="../html/index.html" class="active">Home</a>
+          </li>
+          <li class="hideOnMobile products-parent">
+            <a href="../html/products.html">Products</a>
+            <div class="products-child">
+              <a href="products-baked.php">Baked Goods</a>
+              <a href="products-greens.php">Greens</a>
+              <a href="products-meat.php">Meat</a>
+              <a href="products-dairy.php">Dairy</a>
+            </div>
+          </li>
+          <li class="hideOnMobile">
+            <a href="../html/contact.html">Contact Us</a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="../html/cart.php"
+              ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="../html/profile.php"
+              ><i class="fa fa-user-circle" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li class="hideOnMobile">
+            <a href="../html/account.html" class="sign-in">Sign in</a>
+          </li>
+          <li class="menu-button" onclick=showSidebar()>
+            <a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="26"
+                viewBox="0 -960 960 960"
+                width="26"
+                fill="#307a70"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".navigation-bar .sidebar")
+        sidebar.style.display = "flex"
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".navigation-bar .sidebar")
+        sidebar.style.display = "none"
+      }
+    </script>
+  </body>
+</html>
