@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-up'])) {
     $stmt->bind_param("sssss", $name, $email, $hashed_password, $phone, $type);
 
     if ($stmt->execute()) {
-        // User created successfully, redirect to sign in page
         header("Location: ../html/account.html");
         exit();
     } else {

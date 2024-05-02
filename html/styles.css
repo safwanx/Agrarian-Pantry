@@ -100,7 +100,6 @@ body {
 /* footer.html */
 
 footer {
-  margin-top: auto;
   text-align: left;
   padding: 30px;
   color: gray;
@@ -178,67 +177,48 @@ footer {
 /*styles for contact form*/
 
 .contact-section {
-  max-width: 650px;
-  margin: 20px auto;
-  align-items: center;
-  border-radius: 12px;
-  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-top: 20px;
+  padding: 80px 0;
 }
 
-.contact-top {
-  background-color: #bad8d3;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.contact-box {
-  background-color: #bad8d3;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+.contact-info {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form label {
-  margin-bottom: 8px;
-  font-weight: bold;
+.map-container {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
+.social-icons a {
+  color: #333333;
+  font-size: 24px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
 }
 
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
+.social-icons a:hover {
+  color: #007bff;
 }
 
-.contact-details {
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
-.contact-page {
-  text-align: center;
-  margin-top: 100px;
-  color: black;
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 /*account page*/

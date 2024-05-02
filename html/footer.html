@@ -1,4 +1,106 @@
-<footer>
-    <hr>
-    <p>&copy; 2024 Agrarian Pantry | All rights reserved</p>
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    .custom-bg-color {
+      background-color: #bad8d3;
+    }
+
+    .text-black {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <footer class="custom-bg-color text-black py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p class="text">Agrarian Pantry is a community-owned business dedicated to providing high-quality, locally sourced produce and artisanal goods.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a class="text-black" href="index.html">Home</a></li>
+            <li><a class="text-black" href="products.html">Shop</a></li>
+            <li><a class="text-black" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Connect with Us</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="text-black" href="https://facebook.com"><i class="fab fa-facebook fa-lg"></i></a></li>
+            <li class="list-inline-item"><a class="text-black" href="https://twitter.com"><i class="fab fa-twitter fa-lg"></i></a></li>
+            <li class="list-inline-item"><a class="text-black" href="https://instagram.com"><i class="fab fa-instagram fa-lg"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="bg-light">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text">&copy; 2024 Agrarian Pantry | All rights reserved</p>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a class="text-black" href="#" data-toggle="modal" data-target="#privacyModal">Privacy Policy</a></li>
+            <li class="list-inline-item"><a class="text-black" href="#" data-toggle="modal" data-target="#termsModal">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Our Privacy Policy explains how we collect, use, and protect your personal information when you use our services. 
+            We may collect information such as your name, email address, and browsing activity. We use this information to provide and improve our services, personalize your experience, and communicate with you. We do not sell your information to third parties. 
+            By using our services, you agree to the collection and use of your information as described in this Privacy Policy.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms of Use Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel">Terms of Use</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Our Terms of Use govern your use of our website and services.
+            By accessing or using our website, you agree to comply with these terms.
+            You must be at least 18 years old to use our services. You agree not to misuse our services, interfere with their operation, or access them using a method other than the interface and instructions we provide.
+            We reserve the right to suspend or terminate your access to our services if you violate these terms.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

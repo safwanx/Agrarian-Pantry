@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Contact Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contact Us</title>
 </head>
 <body>
-    <div id="header"></div>
-    <main>
-        <section class="contact-section">
-            <div class="contact-top">
-                <h1>Contact Us</h1>
-                <p>Have a question or want to get in touch? Send us a message and we'll get back to you as soon as possible.</p>
+  <div id="header"></div>
+  <main>
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-info">
+              <h2>Get in Touch</h2>
+              <p>We'd love to hear from you! Whether you have a question, need assistance, or just want to say hello, our friendly team is here to help.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Cityville, State</li>
+                <li><i class="fas fa-phone"></i> +966 123 456 789</li>
+                <li><i class="fas fa-envelope"></i> info@agrarian-pantry.com</li>
+              </ul>
+              <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              </div>
             </div>
-            <div class="contact-box">
-                <form class="contact-form" action="../php/contact_form.php" method="post">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-
-                    <label for="phone">Phone:</label><br>
-                    <input type="tel" id="phone" name="phone" required><br><br>
-                    
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-
-                    <button id="submitButton" type="submit">Submit</button>
-                </form>
-            </div>
-
-            <div class="contact-details">
-                <div>
-                    <h2>Contact Info</h2>
-                    <p>Email: info@agrarian-pantry.com<br> Phone: +966 123 456 789</p>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-form">
+              <h2>Send a Message</h2>
+              <form action="../php/contact_form.php" method="post">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                 </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+              </form>
             </div>
-
-            <div class="social-icons">
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="../images/instagram-icon.png" alt="Instagram">
-                </a>
-
-                <a href="https://twitter.com" target="_blank">
-                    <img src="../images/twitter-icon.jpg" alt="Twitter">
-                </a>
-
-                <a href="mailto:info@agrarian-pantry.com" target="_blank">
-                    <img src="../images/email-icon.png" alt="Email">
-                </a>
+          </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Find Us</h2>
             </div>
-        </section>
-    </main>
-
-    <div id="footer"></div>
-
-    <script src="../scripts/header.js"></script>
-    <script src="../scripts/contactButtons.js"></script>
-    <script src="../scripts/footer.js"></script>    
+          <div class="col-md-12">
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.9494064868614!2d-119.78801578467943!3d36.73209737923116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945e26d4340503%3A0xb32dda71cf0730a5!2sBitwise%20Industries!5e0!3m2!1sen!2sus!4v1682984191424!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="../scripts/header.js"></script>
+  <script src="../scripts/footer.js"></script>
 </body>
 </html>

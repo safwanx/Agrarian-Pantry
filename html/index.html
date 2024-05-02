@@ -3,29 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css" />
     <title>Agrarian Pantry</title>
   </head>
   <body>
     <div id="header"></div>
 
-    <!-- home start -->
     <section class="home">
-      <div></div>
-      <h1>Eat Fresh, Spend Less, Go Local.</h1>
-      <p>
-        At Agrarian Pantry, we skip the supermarket markup! We connect you
-        directly with local farms, bringing fresh, seasonal produce straight
-        from the field to your table. Our convenient service makes it easier
-        than ever to eat healthy, while saving money on groceries. Plus, by
-        supporting local farmers, you're contributing to a sustainable food
-        system and fostering a thriving community. Enjoy the taste of the
-        season, for less, with Agrarian Pantry!
-      </p>
-    </div>
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="display-4">Eat Fresh, Spend Less, Go Local.</h1>
+            <p class="lead">
+              At Agrarian Pantry, we skip the supermarket markup! We connect you directly with local farms, bringing fresh, seasonal produce straight from the field to your table. Our convenient service makes it easier than ever to eat healthy, while saving money on groceries. Plus, by supporting local farmers, you're contributing to a sustainable food system and fostering a thriving community. Enjoy the taste of the season, for less, with Agrarian Pantry!
+            </p>
+            <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="../images/happy customer stills.jpg"
+              alt="Placeholder Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="mb-4">Featured Products</h2>
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img
+                    src="../images/tomahawk.png"
+                    alt="Product Image"
+                    class="card-img"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Tomahawk</h5>
+                    <p class="card-text">
+                      A large, flavorful Tomahawk steak, ideal for grilling or roasting.
+                    </p>
+                    <a href="" class="btn btn-primary">View Product</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mb-4">Seasonal Deals</h2>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special Offer</h5>
+                <p class="card-text">
+                  Get 20% off on all seasonal fruits and vegetables!
+                </p>
+                <a href="products-greens.php" class="btn btn-primary">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video class="embed-responsive-item" controls="autoplay">
+                <source src="../images/welcome video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="mb-4">Why Choose Agrarian Pantry?</h2>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-check text-success"></i> Fresh, locally sourced produce
+              </li>
+              <li>
+                <i class="fas fa-check text-success"></i> Convenient online ordering
+              </li>
+              <li>
+                <i class="fas fa-check text-success"></i> Support sustainable farming
+              </li>
+              <li>
+                <i class="fas fa-check text-success"></i> Save money on groceries
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h2 class="mb-4">Join Our Newsletter</h2>
+            <form id="newsletter-form">
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  id="email-input"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+              <span id="success-message" style="display: none;">
+                <i class="fas fa-check-circle text-success"></i>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div id="footer"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        var emailInput = document.getElementById('email-input').value;
+        document.getElementById('success-message').style.display = 'inline';
+        this.reset();
+      });
+    </script>
+
     <script src="../scripts/header.js"></script>
     <script src="../scripts/footer.js"></script>
   </body>
