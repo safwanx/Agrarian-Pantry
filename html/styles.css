@@ -25,6 +25,7 @@ body {
   height: auto;
   top: 0;
   left: 0;
+  z-index: 100; /* Added z-index to ensure the navigation bar is on top */
 }
 
 .navigation-bar ul {
@@ -71,13 +72,14 @@ body {
 
 .navigation-bar .sign-in:hover {
   color: #307a70;
+  background-color: #fefbf6;
 }
 
 .navigation-bar i {
   font-size: 20px;
 }
 
-.navigation-bar .products-child{
+.navigation-bar .products-child {
   position: fixed;
   margin: 5px;
   height: 150px;
@@ -117,6 +119,7 @@ body {
 .navigation-bar .sidebar a {
   width: 100%;
 }
+
 .menu-button {
   display: none;
 }
@@ -125,6 +128,7 @@ body {
   .hideOnMobile {
     display: none;
   }
+
   .menu-button {
     display: block;
   }
