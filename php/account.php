@@ -5,7 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sign-in'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-
     require 'database.php';
 
     $stmt = $conn->prepare("SELECT id, name, email, password FROM users WHERE email=?");

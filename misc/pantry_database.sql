@@ -70,7 +70,6 @@ CREATE TABLE contact_form (
     message TEXT NOT NULL
 );
 
-
 --Use the above script to make the database in ur local machine. The below part is only when needed, contact before executing them--
 
 --(DO NOT EXECUTE THE QUERIES BELOW. I REPEAT DO NOT WITHOUT CONSULTING)--
