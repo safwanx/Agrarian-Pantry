@@ -21,6 +21,7 @@ $row = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../html/styles.css">
     <title>Modify Profile</title>
 </head>
@@ -30,24 +31,41 @@ $row = $result->fetch_assoc();
     <main>
         <section class="modify-class">
             <div class="modify-container">
-                <form method="post" action="">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" value="<?php echo $row['name']; ?>" required><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required><br><br>
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" value="<?php echo $row['phone']; ?>" required><br><br>
-                    <label for="text">Type</label>
-                    <select name="type" id="type">
-                        <option value="Seller" <?php echo ($row['type'] == 'Seller') ? 'selected' : ''; ?>>Seller</option>
-                        <option value="Customer" <?php echo ($row['type'] == 'Customer') ? 'selected' : ''; ?>>Customer</option>
-                    </select><br><br>
-                    <button type="submit" name="modify-profile">Change Profile</button>
-                </form>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form method="post" action="">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" value="<?php echo $row['name']; ?>" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo $row['phone']; ?>" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type">Type</label>
+                                    <select class="form-control" name="type" id="type">
+                                        <option value="Seller" <?php echo ($row['type'] == 'Seller') ? 'selected' : ''; ?>>Seller</option>
+                                        <option value="Customer" <?php echo ($row['type'] == 'Customer') ? 'selected' : ''; ?>>Customer</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary" name="modify-profile">Change Profile</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     <footer><?php include('../html/footer.html'); ?></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="../scripts/account.js"></script>
 </body>
 </html>
