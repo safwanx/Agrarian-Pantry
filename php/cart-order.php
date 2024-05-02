@@ -65,16 +65,13 @@ if (!empty($_SESSION['cart'])) {
             <header><?php include('../html/header.html'); ?></header>
             <h1>Order Placed Successfully</h1>
             <p>Your order has been placed successfully. Thank you for shopping with us!</p>
-            <p>You will be redirected to the home page in 5 seconds.</p>
             <footer><?php include('../html/footer.html'); ?></footer>
         </body>
         </html>
         <?php
-        header("refresh:5;url=../html/index.html");
         // Clear the cart
         unset($_SESSION['cart']);
     } catch (Exception $e) {
-        // Rollback the transaction in case of an error
         $conn->rollback();
         echo "An error occurred while placing the order: " . $e->getMessage();
     } finally {
