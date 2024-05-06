@@ -75,7 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['modify-password'])) {
             $stmt->bind_param("s", $hashed_new_password);
             if ($stmt->execute()) {
                 echo "Password changed successfully";
-                header("Location: ../html/account.html");
                 session_unset();
                 exit();
             } else {
