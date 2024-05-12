@@ -4,7 +4,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate input fields
     $name = trim($_POST["name"]);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $phone = trim($_POST["phone"]);
     $message = trim($_POST["message"]);
 
     // Check if all fields are filled
@@ -15,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     require 'database.php';
 
-    $stmt = $conn->prepare("INSERT INTO contact_form (name, email, phone, message) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $name, $email, $phone, $message);
+    $stmt = $conn->prepare("INSERT INTO contact_form (name, email, message) VALUES (?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $email, $message);
 
     // Insert data into database
     if ($stmt->execute()) {
