@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require 'database.php';
 
     $stmt = $conn->prepare("INSERT INTO contact_form (name, email, message) VALUES (?, ?, ?)");
-    $stmt->bind_param("ssss", $name, $email, $message);
+    $stmt->bind_param("sss", $name, $email, $message);
 
     // Insert data into database
     if ($stmt->execute()) {
